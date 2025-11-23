@@ -387,12 +387,22 @@ footer div h4 {
 
     #servicos_inicio{
         height: 90vh;
-        width: 75%;
+        width:80%;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        justify-content: center;
         
+        margin: 0;
+        padding: 0;
     }
+
+
+    a{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+   
 
     #servicos_inicio div img{
         width: 65%;

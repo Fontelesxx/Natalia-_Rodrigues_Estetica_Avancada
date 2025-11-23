@@ -236,7 +236,7 @@ footer div h4 {
 
 /* Responsividade */
 
-/* Tablet */
+/* Celular */
 
 @media (min-width: 769px) and (max-width: 1024px){
 
@@ -273,14 +273,10 @@ footer div h4 {
     .servico-section {
         min-height: auto;
         margin: 30px 3%;
-        flex-direction: column; /* Empilha em telas menores */
         text-align: center;
     }
 
-    .servico-section.reverse {
-        flex-direction: column; /* Mantém empilhado */
-    }
-
+    
     .servico-image {
         width: 100%;
         height: 350px;
@@ -346,6 +342,7 @@ footer div h4 {
    #servicos_s{
     padding-top: 17vh;
     font-size: 1px;
+    flex-direction: column;
     
    }
 
@@ -376,32 +373,38 @@ footer div h4 {
 
     /* Seções de Serviço */
     .servico-section {
-        margin: 20px 60px;
+        margin: 40px 60px;
+        flex-direction: column;
     }
 
+    .servico-section.reverse{
+        flex-direction: column;
+    }
+
+    .servico-section {
+        min-height: auto;
+        margin: 30px 3%;
+        text-align: center;
+    }
+
+    
     .servico-image {
-        height: 250px;
+        width: 100%;
+        height: 350px;
+        border-radius: 10px 10px 0 0;
     }
 
     .servico-content {
-        padding: 1.5rem;
-    }
-
-    .servico-content-inner {
-        max-width: 100%;
+        width: 100%;
+        padding: 2rem;
     }
 
     .servico-content h2 {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .servico-content p {
-        font-size: 0.9rem;
-    }
-
-    .servico-button {
-        padding: 0.5rem 1.5rem;
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
     /* Rodapé */
