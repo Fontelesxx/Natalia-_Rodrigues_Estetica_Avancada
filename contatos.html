@@ -5,14 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contatos</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contatos.css">
     <link rel="shortcut icon" href="img/logo sem fundo.png" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
 
     <header id="barra_navegacao">
-        <div id="logo"><a href="index.html"><img src="img/logo.png" alt="Logo da empresa" id="imagem_logo"></a>
+        <div id="logo"><a href="index.html"><img src="img/logo sem fundo.png" alt="Logo da empresa" id="imagem_logo"></a>
         </div>
         <nav>
             <ul><a href="index.html" class="hover-underline-animation left">Início</a></ul>
@@ -21,10 +23,56 @@
             <ul><a href="contatos.html" class="hover-underline-animation left">Contatos</a></ul>
         </nav>
     </header>
-    
 
-    <main></main>
-    <footer></footer>
+
+    <main>
+        <div id="contato_container" data-aos="zoom-in" data-aos-duration="1000">
+            <h1>Entre em Contato</h1>
+
+            <div class="info_section">
+                <h2>Horário de Atendimento</h2>
+                <p>Segunda à sexta: 9h às 20h</p>
+            </div>
+
+            <div class="info_section">
+                <h2>Endereço</h2>
+                <p>Rua Maria Cândida 1269, Vila Guilherme</p>
+                <p>São Paulo - SP</p>
+            </div>
+
+            <div class="info_section">
+                <h2>Fale Conosco</h2>
+                <div id="redes_sociais">
+                    <a href="https://api.whatsapp.com/send?phone=5511964539393&text=Oi,%20vim%20pelo%20site!" target="_blank">
+                        <div class="icone_social">W</div>
+                        WhatsApp
+                    </a>
+                    <a href="https://www.instagram.com/nataliarodriguesesteticista" target="_blank">
+                        <div class="icone_social">I</div>
+                        Instagram
+                    </a>
+                </div>
+                <p>*Entre em contato para agendar seu horário.</p>
+            </div>
+        </div>
+    </main>
+    <footer data-aos="fade-right" data-aos-duration="1000">
+        <div><img src="img/Logo.jpeg" alt="Logo"></div>
+        <div>
+            <h4>Endereço</h4>
+            <p>Rua Maria Cândida 1269 Vila Guilherme</p>
+        </div>
+        <div>
+            <h4>Contato</h4>
+            <p>4002-8922</p>
+        </div>
+        <div>
+            <h4>E-mail</h4>
+            <p>minezin.daslendas@gmail.com</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
