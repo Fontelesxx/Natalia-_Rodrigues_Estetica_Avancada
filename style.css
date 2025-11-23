@@ -1,0 +1,576 @@
+/* Fonte */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Serif+Hebrew:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+
+/* Reset básico */
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+/* Body */
+
+body {
+    font-family: "Noto Serif Hebrew", serif;
+    background-color: #ffdfc9;
+}
+
+/* Barra de navegação */
+
+
+
+header {
+    display: flex;
+    gap: 10vh;
+    justify-content: space-between;
+    height: 15vh;
+    align-items: center;
+    padding: 2vh;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: 0.4s;
+    font-size: 3vh;
+    z-index: 1000;
+}
+
+header.scrolled {
+    background: #664020cc;
+    backdrop-filter: blur(10px);
+    height: 10vh;
+    font-size: 2.5vh;
+
+}
+
+nav {
+    display: flex;
+    gap: 8vh;
+    margin-right: 2vh;
+}
+
+
+.hover-underline-animation {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+}
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+}
+
+.hover-underline-animation.left::after {
+    transform-origin: bottom right;
+}
+
+.hover-underline-animation.left:hover::after {
+    transform-origin: bottom left;
+}
+
+
+#logo {
+    padding-left: 10vh;
+    display: flex;
+    align-items: center;
+}
+
+#imagem_logo {
+    height: 65px;
+    border-radius: 10px;
+}
+
+
+
+/* Conteúdo principal */
+
+/* slogan */
+
+#slogan {
+    font-size: 7vh;
+    width: 83vh;
+    margin-top: 37vh;
+    color: #ffdfc9;
+}
+
+#inicio {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+}
+
+#imagem_de_fundo {
+    background-image: url(img/FOTO\ DE\ FUNDO\ 2.png);
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+    border-bottom-left-radius: 300px;
+}
+
+/* Apresentação */
+
+#apresentacao {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 15vh;
+    margin-top: 25vh;
+    align-items: center;
+}
+
+#apresentacao_dona {
+    width: 68vh;
+    font-size: 3.2vh;
+}
+
+#apresentacao_foto {
+    background-color: #664020cc;
+    border-radius: 30px;
+    width: 76vh;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#apresentacao_foto1 {
+    width: 80%;
+    height: 80%;
+
+}
+
+#apresentacao_dona p {
+    margin-top: 6vh;
+}
+
+
+
+/* Serviços do inicio */
+
+#h1_servicos {
+    margin-top: 20vh;
+    margin-left: 5vh;
+    margin-bottom: 7vh;
+    font-size: 6vh;
+}
+
+#servicos_inicio {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #664020cc;
+    width: 90%;
+    text-align: center;
+    margin-left: 10vh;
+    height: 30vh;
+    border-radius: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#servicos_inicio div img {
+    width: 20vh;
+    border-radius: 25px;
+}
+
+.servicos_inicio_descricao {
+    margin-top: 3vh;
+    color: #ffd5d7;
+
+}
+
+
+
+/* Imagens da clinica */
+
+#clinica {
+    padding: 5vh;
+    margin-top: 6vh;
+    width: 100%;
+}
+
+#clinica h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 6vh;
+    margin-bottom: 7vh;
+}
+
+
+
+#fotos_clinica img {
+    width: 100%;
+    border: solid 2px black;
+}
+
+
+
+
+#fotos_clinica {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+}
+
+#foto1 {
+    grid-row: span 3 / span 3;
+}
+
+#foto2 {
+    grid-column: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 3;
+}
+
+#foto3 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 4;
+    grid-row-start: 1;
+}
+
+#foto4 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 1;
+}
+
+#foto5 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+#foto6 {
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    background-color: black;
+    color: #ffd5d7;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+footer div img {
+    height: 30vh;
+}
+
+footer div h4 {
+    margin-bottom: 5vh;
+}
+
+/* Responsividade */
+
+/* Celular */
+
+@media (max-width: 768px) {
+    /* Nav */
+    body {
+        font-size: 16px;
+    }
+
+    header {
+        height: 10vh;
+        font-size: 1.7vh;
+        flex-direction: row;
+    }
+
+    header nav {
+        justify-content: end;
+        gap: 2vh;
+        margin-right: 2vh;
+    }
+
+
+    header.scrolled {
+        font-size: 1.3vh;
+        height: 6vh;
+    }
+
+    #imagem_de_fundo {
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        border-bottom-left-radius: 100px;
+
+    }
+
+    #logo {
+        padding-left: 2vh;
+    }
+
+    #imagem_logo {
+        height: 30px;
+    }
+
+    nav {
+        gap: 2vw;
+    }
+
+    /* Slogan */
+    #inicio {
+        height: 80vh;
+        align-items: center;
+    }
+
+    #slogan {
+        font-size: 4vh;
+        width: 90vw;
+        margin-top: 0;
+        text-align: center;
+    }
+
+    /* Apresentação */
+    #apresentacao {
+        flex-direction: column;
+        gap: 5vh;
+        margin-top: 10vh;
+        padding: 0 5vw;
+    }
+
+    #apresentacao_dona {
+        width: 100%;
+        font-size: 2.5vh;
+        text-align: center;
+    }
+
+    #apresentacao_dona h1 {
+        font-size: 4vh;
+    }
+
+    #apresentacao_foto {
+        border-radius: 30px;
+        width: 80%;
+        height: 80%vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #apresentacao_foto img {
+        width: 80%;
+        height: auto;
+    }
+
+    /* Servicos inicio */
+
+    #servicos_inicio{
+        height: 90vh;
+        width: 56vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+    }
+
+    #servicos_inicio div img{
+        width: 65%;
+    }
+
+    
+
+
+    /* Imagens da Clínica */
+    #clinica{
+        padding: 5vh 5vw;
+        text-align: center;
+    }
+
+    #clinica h1{
+        font-size: 4vh;
+        margin-bottom: 5vh;
+    }
+
+    #fotos_clinica {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #fotos_clinica img {
+        width: 100%;
+        height: auto;
+    }
+
+
+
+
+    /* Footer */
+    footer {
+        font-size: 2vh;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    footer div {
+        margin-bottom: 3vh;
+    }
+
+    footer div img {
+        height: 15vh;
+    }
+
+    footer div h4 {
+        margin-bottom: 1vh;
+    }
+}
+
+
+
+/* Tablet */
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    /* Barra de Navegação */
+    header {
+        gap: 5vh;
+        padding-right: 5vh;
+        font-size: 2.5vh;
+    }
+
+    #logo {
+        padding-left: 5vh;
+    }
+
+    nav {
+        gap: 4vh;
+    }
+
+    #imagem_de_fundo {
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        border-bottom-left-radius: 200px;
+    }
+
+    /* Slogan */
+    #slogan {
+        font-size: 5vh;
+        width: 60vh;
+        margin-top: 30vh;
+    }
+
+    /* Apresentação */
+    #apresentacao {
+        gap: 10vh;
+        margin-top: 15vh;
+        padding: 0;
+        margin-left: 0;
+    }
+
+    #apresentacao_dona {
+        width: 50vh;
+        font-size: 2.8vh;
+    }
+
+
+
+    #apresentacao_foto1 {
+        width: 50vh;
+    }
+
+
+    /* Servicos inicio */
+
+      #servicos_inicio {
+        height: 60vh;
+        width: 70%vh;
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        box-sizing: border-box;
+        gap: 0px;
+    }
+
+    a {
+        display: flex;
+        justify-content: center;
+        margin: 0%;
+    }
+
+
+    /* Imagens da Clínica (Grid) */
+    #fotos_clinica {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+
+
+    #foto1 {
+        grid-row: span 1;
+        grid-column: span 1;
+    }
+
+    #foto2 {
+        grid-column: span 1;
+        grid-row: span 1;
+        grid-column-start: auto;
+        grid-row-start: auto;
+    }
+
+    #foto3 {
+        grid-row: span 1;
+        grid-column: span 1;
+        grid-column-start: auto;
+        grid-row-start: auto;
+    }
+
+    #foto4 {
+        grid-row: span 1;
+        grid-column: span 1;
+        grid-column-start: auto;
+        grid-row-start: auto;
+    }
+
+    #foto5 {
+        grid-row: span 1;
+        grid-column: span 1;
+        grid-column-start: auto;
+        grid-row-start: auto;
+    }
+
+    #foto6 {
+        grid-column: span 1;
+        grid-row: span 1;
+        grid-column-start: auto;
+        grid-row-start: auto;
+    }
+
+    /* Footer */
+    footer {
+        padding: 3vh 0;
+        font-size: 2vh;
+    }
+}

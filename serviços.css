@@ -1,0 +1,417 @@
+/* Fonte */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Serif+Hebrew:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+/* reset básico */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    background-color: #491f06;
+    color: #4a5568;
+    font-family: "Noto Serif Hebrew", serif;
+}
+
+/* Nav */
+header {
+    display: flex;
+    gap: 10vh;
+    justify-content: space-between;
+    height: 15vh;
+    align-items: center;
+    padding: 2vh;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: 0.4s;
+    font-size: 3vh;
+    z-index: 1000;
+}
+
+header.scrolled {
+    background: #664020cc;
+    backdrop-filter: blur(10px);
+    height: 10vh;
+    font-size: 2.5vh;
+
+}
+
+nav {
+    display: flex;
+    gap: 8vh;
+    margin-right: 2vh;
+}
+
+
+.hover-underline-animation {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+}
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+}
+
+.hover-underline-animation.left::after {
+    transform-origin: bottom right;
+}
+
+.hover-underline-animation.left:hover::after {
+    transform-origin: bottom left;
+}
+
+
+#logo {
+    padding-left: 10vh;
+    display: flex;
+    align-items: center;
+}
+
+#imagem_logo {
+    height: 65px;
+    border-radius: 10px;
+}
+
+
+
+
+/* COnteudo principal */
+
+#fundo_servicos{
+    background-image: url(img/FOTO\ DE\ FUNDO\ 2.png);
+    background-size: cover ;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+    border-bottom-left-radius:340px ;
+    height: 80vh;
+}
+
+#servicos_s{
+    padding-top: 37vh;
+    color: #ffffff;
+    font-size: 6vh;
+}
+
+#servicos_s h1{
+    background-color: #491f068a;
+    width:140vh ;
+    border-radius: 0 40px 0 0;
+    height: 70vh;
+    padding-left: 38vh;
+    padding-top: 7vh;
+
+}
+
+.servico-section {
+    display: flex;
+    align-items: center;
+    height: 70vh;
+    margin-bottom: 0px;
+    
+}
+
+#primeira_section{
+    margin-top: 20vh;
+}
+
+.servico-section.reverse {
+    flex-direction: row-reverse;
+}
+
+.servico-image {
+    width: 40%;
+    height: 60vh;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+
+.servico-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.servico-content {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.servico-content-inner {
+    max-width: 500px;
+    width: 100%;
+}
+
+.servico-content h2 {
+    font-size: 3.5rem;
+    color: #5a6b7a;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    font-weight: 400;
+}
+
+.servic0-content p {
+    font-size: 1rem;
+    color: #6b7280;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+.servico-button {
+    background-color: #a89968;
+    color: #ffffff;
+    margin-top: 20px;
+    padding: 0.75rem 2rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 2px;
+    font-family: 'Lora', serif;
+}
+
+.servico-button:hover {
+    background-color: #8b7a52;
+}
+
+
+/* Footer */
+
+footer {
+    display: flex;
+    background-color: black;
+    color: #ffd5d7;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+footer div img {
+    height: 30vh;
+}
+
+footer div h4 {
+    margin-bottom: 5vh;
+}
+
+
+
+
+/* Responsividade */
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+
+    /* Nav */
+    header {
+        gap: 5vh;
+        padding-right: 5vh;
+        font-size: 2.5vh;
+    }
+
+    #logo {
+        padding-left: 5vh;
+    }
+
+    nav {
+        gap: 4vh;
+    }
+
+    /* inicio servico */
+
+    #servicos_s h1{
+    background-color: #491f068a;
+    width:100vh ;
+    border-radius: 0 40px 0 0;
+    height: 70vh;
+    padding-left: 20vh;
+    padding-top: 7vh;
+    font-size: 7vh;
+
+}
+
+
+    /* Seções de Serviço */
+    .servico-section {
+        min-height: auto;
+        margin: 30px 3%;
+        flex-direction: column; /* Empilha em telas menores */
+        text-align: center;
+    }
+
+    .servico-section.reverse {
+        flex-direction: column; /* Mantém empilhado */
+    }
+
+    .servico-image {
+        width: 100%;
+        height: 350px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .servico-content {
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .servico-content h2 {
+        font-size: 2rem;
+    }
+
+    .servico-content p {
+        font-size: 1rem;
+    }
+
+    /* Rodapé */
+    footer {
+        justify-content: space-between;
+        padding: 2rem 3%;
+    }
+}
+
+/* Mobile (max-width: 767px) */
+@media (max-width: 767px) {
+    /* Nav*/
+     body {
+        font-size: 16px;
+    }
+
+    header {
+        height: 10vh;
+        font-size: 1.7vh;
+        flex-direction: row;
+    }
+
+    header nav {
+        justify-content: end;
+        gap: 2vh;
+    }
+
+
+    header.scrolled {
+        font-size: 1.3vh;
+        height: 6vh;
+    }
+
+
+    #logo {
+        padding-left: 2vh;
+    }
+
+    #imagem_logo {
+        height: 30px;
+    }
+
+
+/* Servico */
+
+   #servicos_s{
+    padding-top: 17vh;
+    font-size: 1px;
+    
+   }
+
+
+    #servicos_s h1{
+        background-color: #491f068a;
+        width:40vh ;
+        border-radius: 0 40px 0 0;
+        height: 50vh;
+        font-size: 1px;
+        
+}
+
+    /* Seção de Título/Fundo */
+
+    #primeira_section{
+        margin-top: 13vh;
+    }
+
+    #fundo_servicos {
+        height: 30vh;
+    }
+
+    #servicos_s h1 {
+        font-size: 2rem;
+        padding: 1rem;
+    }
+
+    /* Seções de Serviço */
+    .servico-section {
+        margin: 20px 60px;
+    }
+
+    .servico-image {
+        height: 250px;
+    }
+
+    .servico-content {
+        padding: 1.5rem;
+    }
+
+    .servico-content-inner {
+        max-width: 100%;
+    }
+
+    .servico-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .servico-content p {
+        font-size: 0.9rem;
+    }
+
+    .servico-button {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.8rem;
+    }
+
+    /* Rodapé */
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer div {
+        margin: 0.5rem 0;
+    }
+}
