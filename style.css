@@ -295,9 +295,9 @@ footer div h4 {
 
 /* Celular */
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     /* Nav */
-    body {
+     body {
         font-size: 16px;
     }
 
@@ -310,7 +310,6 @@ footer div h4 {
     header nav {
         justify-content: end;
         gap: 2vh;
-        margin-right: 2vh;
     }
 
 
@@ -319,13 +318,6 @@ footer div h4 {
         height: 6vh;
     }
 
-    #imagem_de_fundo {
-        width: 100%;
-        background-size: cover;
-        background-position: center;
-        border-bottom-left-radius: 100px;
-
-    }
 
     #logo {
         padding-left: 2vh;
@@ -335,9 +327,16 @@ footer div h4 {
         height: 30px;
     }
 
-    nav {
-        gap: 2vw;
+
+    #imagem_de_fundo {
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        border-bottom-left-radius: 100px;
+
     }
+
+    
 
     /* Slogan */
     #inicio {
