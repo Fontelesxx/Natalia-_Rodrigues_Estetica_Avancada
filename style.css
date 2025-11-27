@@ -129,7 +129,7 @@ nav {
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.5);
     background-blend-mode: darken;
-    border-bottom-left-radius: 300px;
+    border-bottom-left-radius: 340px;
 }
 
 /* Apresentação */
@@ -236,7 +236,7 @@ h1 {
     "foto1 foto2 foto3"
     "foto4 foto2 foto3"
     "foto4 foto5 foto5";
-    gap: 60px;
+    gap: 20px;
 }
 
 
@@ -272,7 +272,7 @@ h1 {
 #foto5{
     grid-area: foto5;
     border-radius: 20px;
-    height: 31vh;
+    height: 32vh;
     width: 85vh;
 }
 
@@ -411,7 +411,7 @@ footer div h4 {
 
     #servicos_inicio div img{
         width: 65%;
-        height: auto;
+        height: 10vh;
     }
 
     #tamanho_da_manta{

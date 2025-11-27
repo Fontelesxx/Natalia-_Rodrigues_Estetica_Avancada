@@ -106,7 +106,7 @@ nav {
 /* COnteudo principal */
 
 #fundo_servicos{
-    background-image: url(img/FOTO\ DE\ FUNDO\ 2.png);
+    background-image: url(img/background\ serviços.png);
     background-size: cover ;
     background-color: rgba(0, 0, 0, 0.5);
     background-blend-mode: darken;
