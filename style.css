@@ -18,6 +18,7 @@
 body {
     font-family: "Noto Serif Hebrew", serif;
     background-color: #ddbda7;
+    font-size: 2.5vh;
 }
 
 /* Barra de navegação */
@@ -197,14 +198,13 @@ a {
 }
 
 #servicos_inicio div img {
-    max-width: 20vh;
-    max-height: 20vh;
-    border-radius: 25px;
-    object-fit: cover;
+    width: 25vh;
+    border-radius: 20px;
+    height: 16vh;
 }
 
 .servicos_inicio_descricao {
-    margin-top: 3vh;
+    margin-top: 2vh;
     color: #ffd5d7;
 
 }
@@ -216,58 +216,65 @@ a {
     padding: 5vh;
     margin-top: 6vh;
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-#clinica h1 {
+h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 6vh;
     margin-bottom: 7vh;
+    margin-top: 13vh;
+    margin-left: 7vh;
 }
 
-
-
-.img_clinica{
-    height: 10vh;
-    border-radius: 10px;
-    border: solid black 2px;
-}
-
-.img_clinica_foto2{
-    height: 100%;
-    border: solid black 2px;
-    border-radius: 10px;
-}
 
 .imagens_clinica{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr  0.30fr 0.60fr;
+    grid-template-rows: 1fr  0.1fr 1fr;
     grid-template-areas:
     "foto1 foto2 foto3"
     "foto4 foto2 foto3"
     "foto4 foto5 foto5";
-    gap: 10px;
+    gap: 60px;
 }
 
 
 #foto1{
     grid-area: foto1;
+    height: 40vh;
+    width: 40vh;
+    border-radius: 20px;
 }
 
 #foto2{
     grid-area: foto2;
+    height: 50vh;
+    width: 40vh;
+    border-radius: 20px;
+   
 }
 
 #foto3{
     grid-area: foto3;
+    height: 50vh;
+    width: 40vh;
+    border-radius: 20px;
 }
 
 #foto4{
     grid-area: foto4;
+    height: 40vh;
+    width: 40vh;
+    border-radius: 20px;
 }
 
 #foto5{
     grid-area: foto5;
+    border-radius: 20px;
+    height: 31vh;
+    width: 85vh;
 }
 
 
@@ -283,6 +290,7 @@ footer {
     align-items: center;
     text-align: center;
     justify-content: space-evenly;
+
 }
 
 footer div img {
