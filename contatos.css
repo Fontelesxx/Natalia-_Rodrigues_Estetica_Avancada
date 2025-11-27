@@ -269,34 +269,36 @@ footer div h4 {
 
 /* --- Celular (Telas até 767px) --- */
 @media (max-width: 767px) {
-    /* Cabeçalho */
-    #barra_navegacao {
-        flex-direction: column;
-        padding: 10px 5%;
+    body {
+        font-size: 16px;
     }
+
+    header {
+        height: 10vh;
+        font-size: 1.7vh;
+        flex-direction: row;
+    }
+
+    header nav {
+        justify-content: end;
+        gap: 2vh;
+    }
+
+
+    header.scrolled {
+        font-size: 1.3vh;
+        height: 6vh;
+    }
+
 
     #logo {
-        margin-bottom: 10px;
+        padding-left: 2vh;
     }
 
-    #barra_navegacao nav {
-        width: 100%;
-        display: flex; /* Garante que a nav use flex para distribuir os links */
-        justify-content: space-around;
+    #imagem_logo {
+        height: 30px;
     }
 
-    #barra_navegacao nav ul {
-        /* O HTML usa <ul> para cada link, precisamos garantir que eles fiquem lado a lado */
-        display: inline-block; /* Permite que os <ul> fiquem lado a lado */
-        margin: 0;
-        padding: 0;
-    }
-
-    #barra_navegacao nav a {
-        padding: 8px 0;
-        font-size: 0.9em;
-        display: block; /* Garante que o link ocupe o espaço do <ul> */
-    }
 
     /* Conteúdo Principal */
     main {
@@ -313,6 +315,7 @@ footer div h4 {
     }
 
     #contato_container h1 {
+        width: 90%;
         font-size: 1.8em;
         margin-bottom: 20px;
     }
