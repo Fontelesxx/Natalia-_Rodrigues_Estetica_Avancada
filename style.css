@@ -314,7 +314,7 @@ footer div h4 {
         height: 10vh;
         font-size: 1.7vh;
         flex-direction: row;
-        gap: 2vw;
+        gap: 2vh;
     }
 
     header nav {
@@ -424,11 +424,7 @@ footer div h4 {
     }
 
 
-    .tamanho_da_manta {
-        width: 65% !important;
-        height: auto !important;
-    }
-
+    
 
     /* Imagens da Clínica */
     #clinica{
@@ -459,7 +455,7 @@ footer div h4 {
 
     #foto1, #foto2, #foto3, #foto4, #foto5 {
         width: 100%;
-        height: auto;
+        height: 35vh;
         grid-area: unset;
     }
 
