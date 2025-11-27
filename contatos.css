@@ -223,22 +223,27 @@ footer div h4 {
 
 /* Responsividade */
 
-/* ================================================= */
-/* Estilos Responsivos (Media Queries) - REVISADO */
-/* ================================================= */
 
-/* --- Tablet (Telas entre 768px e 1024px) --- */
-@media (max-width: 1024px) {
-    /* Cabeçalho */
-    #barra_navegacao {
-        padding: 15px 3%;
+/* Tablet */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Barra de Navegação */
+    header {
+        gap: 5vh;
+        padding-right: 5vh;
+        font-size: 2.5vh;
     }
 
-    #barra_navegacao nav ul {
-        margin: 0 5px;
+    #logo {
+        padding-left: 5vh;
+    }
+
+    nav {
+        gap: 4vh;
     }
 
     /* Conteúdo Principal */
+    
     main {
         padding: 40px 3%;
     }
@@ -250,6 +255,7 @@ footer div h4 {
 
     #contato_container h1 {
         font-size: 2em;
+        width: 90%;
     }
 
     .info_section h2 {
@@ -267,8 +273,8 @@ footer div h4 {
     }
 }
 
-/* --- Celular (Telas até 767px) --- */
-@media (max-width: 767px) {
+/* Celular */
+@media (max-width: 768px) {
     body {
         font-size: 16px;
     }
@@ -302,16 +308,16 @@ footer div h4 {
 
     /* Conteúdo Principal */
     main {
-        padding: 30px 0; /* Remover padding horizontal para o container ocupar a tela */
+        padding: 30px 0; 
         min-height: auto;
-        width: 100%; /* Garantir que o main ocupe toda a largura */
+        width: 100%; 
     }
 
     #contato_container {
         padding: 20px;
         box-shadow: none;
-        width: 90%; /* Dar um respiro nas laterais */
-        margin: 0 auto; /* Centralizar o container */
+        width: 90%;
+        margin: 0 auto;
     }
 
     #contato_container h1 {
