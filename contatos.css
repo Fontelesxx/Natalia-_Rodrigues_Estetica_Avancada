@@ -224,7 +224,7 @@ footer div h4 {
 /* Responsividade */
 
 /* ================================================= */
-/* Estilos Responsivos (Media Queries) */
+/* Estilos Responsivos (Media Queries) - REVISADO */
 /* ================================================= */
 
 /* --- Tablet (Telas entre 768px e 1024px) --- */
@@ -281,27 +281,35 @@ footer div h4 {
 
     #barra_navegacao nav {
         width: 100%;
-        justify-content: space-around; /* Distribui os links */
+        display: flex; /* Garante que a nav use flex para distribuir os links */
+        justify-content: space-around;
     }
 
     #barra_navegacao nav ul {
+        /* O HTML usa <ul> para cada link, precisamos garantir que eles fiquem lado a lado */
+        display: inline-block; /* Permite que os <ul> fiquem lado a lado */
         margin: 0;
+        padding: 0;
     }
 
     #barra_navegacao nav a {
         padding: 8px 0;
         font-size: 0.9em;
+        display: block; /* Garante que o link ocupe o espaço do <ul> */
     }
 
     /* Conteúdo Principal */
     main {
-        padding: 30px 5%;
-        min-height: auto; /* Ajuste para evitar problemas em telas pequenas */
+        padding: 30px 0; /* Remover padding horizontal para o container ocupar a tela */
+        min-height: auto;
+        width: 100%; /* Garantir que o main ocupe toda a largura */
     }
 
     #contato_container {
         padding: 20px;
-        box-shadow: none; /* Remover sombra para celular */
+        box-shadow: none;
+        width: 90%; /* Dar um respiro nas laterais */
+        margin: 0 auto; /* Centralizar o container */
     }
 
     #contato_container h1 {
