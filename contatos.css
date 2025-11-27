@@ -223,7 +223,11 @@ footer div h4 {
 
 /* Responsividade */
 
+/* ================================================= */
+/* Estilos Responsivos (Media Queries) */
+/* ================================================= */
 
+/* --- Tablet (Telas entre 768px e 1024px) --- */
 @media (max-width: 1024px) {
     /* Cabeçalho */
     #barra_navegacao {
@@ -277,7 +281,7 @@ footer div h4 {
 
     #barra_navegacao nav {
         width: 100%;
-        justify-content: space-around;
+        justify-content: space-around; /* Distribui os links */
     }
 
     #barra_navegacao nav ul {
@@ -292,12 +296,12 @@ footer div h4 {
     /* Conteúdo Principal */
     main {
         padding: 30px 5%;
-        min-height: auto; 
+        min-height: auto; /* Ajuste para evitar problemas em telas pequenas */
     }
 
     #contato_container {
         padding: 20px;
-        box-shadow: none;
+        box-shadow: none; /* Remover sombra para celular */
     }
 
     #contato_container h1 {
