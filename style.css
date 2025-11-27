@@ -3,8 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Serif+Hebrew:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
-
-
 /* Reset básico */
 
 * {
@@ -23,10 +21,10 @@ body {
 /* Barra de navegação */
 
 
-
 header {
     display: flex;
-    gap: 10vh;
+    /* Corrigido: Usar vw para gap horizontal */
+    gap: 10vw;
     justify-content: space-between;
     height: 15vh;
     align-items: center;
@@ -50,8 +48,10 @@ header.scrolled {
 
 nav {
     display: flex;
-    gap: 8vh;
-    margin-right: 2vh;
+    /* Corrigido: Usar vw para gap horizontal */
+    gap: 8vw;
+    /* Corrigido: Usar vw para margin horizontal */
+    margin-right: 2vw;
 }
 
 
@@ -94,7 +94,8 @@ nav {
 
 
 #logo {
-    padding-left: 10vh;
+    /* Corrigido: Usar vw para padding horizontal */
+    padding-left: 10vw;
     display: flex;
     align-items: center;
 }
@@ -112,7 +113,8 @@ nav {
 
 #slogan {
     font-size: 7vh;
-    width: 83vh;
+    /* Corrigido: Usar vw para largura */
+    width: 83vw;
     margin-top: 37vh;
     color: #ffdfc9;
 }
@@ -138,24 +140,31 @@ nav {
     display: flex;
     text-align: center;
     justify-content: center;
-    gap: 15vh;
+    /* Corrigido: Usar vw para gap horizontal */
+    gap: 15vw;
     margin-top: 25vh;
     align-items: center;
+    /* Adicionado padding para evitar quebra em telas menores */
+    padding: 0 5vw;
 }
 
 #apresentacao_dona {
-    width: 68vh;
+    /* Corrigido: Usar vw para largura */
+    width: 68vw;
     font-size: 3.2vh;
 }
 
 #apresentacao_foto {
     background-color: #664020cc;
     border-radius: 30px;
-    width: 76vh;
+    /* Corrigido: Usar vw para largura */
+    width: 76vw;
     height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    /* Adicionado para evitar que a foto diminua demais */
+    flex-shrink: 0;
 }
 
 #apresentacao_foto1 {
@@ -175,7 +184,8 @@ nav {
 
 #h1_servicos {
     margin-top: 20vh;
-    margin-left: 5vh;
+    /* Corrigido: Usar vw para margin horizontal */
+    margin-left: 5vw;
     margin-bottom: 7vh;
     font-size: 6vh;
 }
@@ -187,19 +197,38 @@ nav {
     background-color: #704324;
     width: 90%;
     text-align: center;
-    margin-left: 10vh;
+    /* Corrigido: Centralizar com margin auto */
+    margin: 0 auto;
     height: 30vh;
     border-radius: 20px;
+    /* Adicionado para quebrar em telas menores */
+    flex-wrap: wrap;
+    /* Adicionado gap para espaçamento entre itens */
+    gap: 2vw;
 }
 
 a {
     text-decoration: none;
 }
 
+/* Adicionado para garantir que os itens de serviço se ajustem */
+#servicos_inicio > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    /* Garante que o link ocupe o espaço necessário */
+    flex: 1 1 20%; 
+    min-width: 150px;
+}
+
 #servicos_inicio div img {
     width: 25vh;
     border-radius: 20px;
     height: 16vh;
+    /* Adicionado para garantir que a imagem preencha o espaço sem distorcer */
+    object-fit: cover;
 }
 
 .servicos_inicio_descricao {
@@ -224,19 +253,23 @@ h1 {
     font-size: 6vh;
     margin-bottom: 7vh;
     margin-top: 13vh;
-    margin-left: 7vh;
+    /* Corrigido: Usar vw para margin horizontal */
+    margin-left: 7vw;
 }
 
 
 .imagens_clinica{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr  0.1fr 1fr;
+    /* Corrigido: Removido a linha 0.1fr que não faz sentido */
+    grid-template-rows: 1fr 1fr;
     grid-template-areas:
     "foto1 foto2 foto3"
-    "foto4 foto2 foto3"
     "foto4 foto5 foto5";
     gap: 60px;
+    /* Adicionado max-width para controlar o tamanho máximo */
+    max-width: 1200px;
+    width: 100%;
 }
 
 
@@ -245,6 +278,7 @@ h1 {
     height: 40vh;
     width: 40vh;
     border-radius: 20px;
+    object-fit: cover;
 }
 
 #foto2{
@@ -252,6 +286,7 @@ h1 {
     height: 50vh;
     width: 40vh;
     border-radius: 20px;
+    object-fit: cover;
    
 }
 
@@ -260,6 +295,7 @@ h1 {
     height: 50vh;
     width: 40vh;
     border-radius: 20px;
+    object-fit: cover;
 }
 
 #foto4{
@@ -267,15 +303,17 @@ h1 {
     height: 40vh;
     width: 40vh;
     border-radius: 20px;
+    object-fit: cover;
 }
 
 #foto5{
     grid-area: foto5;
     border-radius: 20px;
     height: 31vh;
-    width: 85vh;
+    /* Corrigido: Usar vw para largura */
+    width: 85vw;
+    object-fit: cover;
 }
-
 
 
 
@@ -289,11 +327,22 @@ footer {
     align-items: center;
     text-align: center;
     justify-content: space-evenly;
+    /* Adicionado padding e flex-wrap */
+    padding: 5vh 2vw;
+    flex-wrap: wrap;
+    gap: 2vw;
 
+}
+
+footer div {
+    /* Adicionado para melhor distribuição e responsividade */
+    flex: 1;
+    min-width: 200px;
 }
 
 footer div img {
     height: 30vh;
+    max-width: 100%;
 }
 
 footer div h4 {
@@ -314,11 +363,14 @@ footer div h4 {
         height: 10vh;
         font-size: 1.7vh;
         flex-direction: row;
+        /* Corrigido: Usar vw para gap */
+        gap: 2vw;
     }
 
     header nav {
-        justify-content: end;
-        gap: 2vh;
+        justify-content: flex-end;
+        /* Corrigido: Usar vw para gap */
+        gap: 2vw;
     }
 
 
@@ -329,7 +381,8 @@ footer div h4 {
 
 
     #logo {
-        padding-left: 2vh;
+        /* Corrigido: Usar vw para padding */
+        padding-left: 2vw;
     }
 
     #imagem_logo {
@@ -345,7 +398,7 @@ footer div h4 {
 
     }
 
-    
+
 
     /* Slogan */
     #inicio {
@@ -380,29 +433,36 @@ footer div h4 {
 
     #apresentacao_foto {
         border-radius: 30px;
-        width: 80%;
+        width: 100%;
         height: 60vh;
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
-    #apresentacao_foto img {
-        width: 80%;
+    #apresentacao_foto1 {
+        width: 90%;
         height: auto;
     }
 
     /* Servicos inicio */
 
     #servicos_inicio{
-        height: 80vh;
-        width:80%;
+        height: auto;
+        width: 90%;
+        /* Corrigido: Usar grid para melhor controle de layout */
         display: grid;
         grid-template-columns: 1fr 1fr;
-        margin: 0;
-        padding: 0;
+        margin: 0 auto;
+        padding: 2vh;
+        gap: 2vh;
     }
 
+    /* Corrigido: Ajustar o link para ocupar o espaço no grid */
+    #servicos_inicio > a {
+        flex: unset;
+        min-width: unset;
+    }
 
     a{
         width: 100%;
@@ -410,13 +470,17 @@ footer div h4 {
         justify-content: center;
     }
 
-   
 
     #servicos_inicio div img{
         width: 65%;
+        height: auto;
     }
 
-    
+    /* Corrigido: Ajustar a imagem da manta */
+    .tamanho_da_manta {
+        width: 65% !important;
+        height: auto !important;
+    }
 
 
     /* Imagens da Clínica */
@@ -425,23 +489,33 @@ footer div h4 {
         text-align: center;
     }
 
-    #clinica h1{
+    h1 {
         font-size: 4vh;
         margin-bottom: 5vh;
+        margin-left: 0;
     }
 
-    #fotos_clinica {
+    /* Corrigido: Alterar o grid para layout de coluna */
+    .imagens_clinica {
         display: flex;
         flex-direction: column;
         gap: 10px;
+        grid-template-columns: none;
+        grid-template-rows: none;
+        grid-template-areas: none;
     }
 
-    #fotos_clinica img {
+    .imagens_clinica img {
         width: 100%;
         height: auto;
     }
 
-
+    /* Corrigido: Remover estilos de grid específicos para celular */
+    #foto1, #foto2, #foto3, #foto4, #foto5 {
+        width: 100%;
+        height: auto;
+        grid-area: unset;
+    }
 
 
     /* Footer */
@@ -449,10 +523,12 @@ footer div h4 {
         font-size: 2vh;
         text-align: center;
         flex-direction: column;
+        padding: 3vh 2vw;
     }
 
     footer div {
         margin-bottom: 3vh;
+        min-width: 100%;
     }
 
     footer div img {
@@ -473,17 +549,21 @@ footer div h4 {
 
     /* Barra de Navegação */
     header {
-        gap: 5vh;
-        padding-right: 5vh;
+        /* Corrigido: Usar vw para gap */
+        gap: 5vw;
+        /* Corrigido: Usar vw para padding */
+        padding-right: 5vw;
         font-size: 2.5vh;
     }
 
     #logo {
-        padding-left: 5vh;
+        /* Corrigido: Usar vw para padding */
+        padding-left: 5vw;
     }
 
     nav {
-        gap: 4vh;
+        /* Corrigido: Usar vw para gap */
+        gap: 4vw;
     }
 
     #imagem_de_fundo {
@@ -496,27 +576,30 @@ footer div h4 {
     /* Slogan */
     #slogan {
         font-size: 5vh;
-        width: 60vh;
-        margin-top: 30vh;
+        /* Corrigido: Usar vw para largura */
+        width: 60vw;
     }
 
     /* Apresentação */
     #apresentacao {
-        gap: 10vh;
+        /* Corrigido: Usar vw para gap */
+        gap: 10vw;
         margin-top: 15vh;
         padding: 0;
         margin-left: 0;
     }
 
     #apresentacao_dona {
-        width: 50vh;
+        /* Corrigido: Usar vw para largura */
+        width: 50vw;
         font-size: 2.8vh;
     }
 
 
 
     #apresentacao_foto1 {
-        width: 50vh;
+        /* Corrigido: Usar vw para largura */
+        width: 50vw;
     }
 
 
@@ -524,12 +607,20 @@ footer div h4 {
 
       #servicos_inicio {
         height: 60vh;
-        width: 70%vh;
+        /* Corrigido: Usar % para largura */
+        width: 70%;
         text-align: center;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         box-sizing: border-box;
         gap: 0px;
+        margin: 0 auto;
+    }
+
+    /* Corrigido: Ajustar o link para ocupar o espaço no grid */
+    #servicos_inicio > a {
+        flex: unset;
+        min-width: unset;
     }
 
     a {
@@ -540,55 +631,74 @@ footer div h4 {
 
 
     /* Imagens da Clínica (Grid) */
-    #fotos_clinica {
+    .imagens_clinica {
+        /* Corrigido: Ajustar o grid para 2 colunas */
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
+        grid-template-areas:
+            "foto1 foto2"
+            "foto3 foto4"
+            "foto5 foto5";
+        gap: 40px;
     }
 
-
+    /* Corrigido: Ajustar tamanhos para o grid de 2 colunas */
     #foto1 {
         grid-row: span 1;
         grid-column: span 1;
+        height: 35vh;
+        width: 100%;
     }
 
     #foto2 {
         grid-column: span 1;
         grid-row: span 1;
-        grid-column-start: auto;
-        grid-row-start: auto;
+        height: 35vh;
+        width: 100%;
     }
 
     #foto3 {
         grid-row: span 1;
         grid-column: span 1;
-        grid-column-start: auto;
-        grid-row-start: auto;
+        height: 35vh;
+        width: 100%;
     }
 
     #foto4 {
         grid-row: span 1;
         grid-column: span 1;
-        grid-column-start: auto;
-        grid-row-start: auto;
+        height: 35vh;
+        width: 100%;
     }
 
     #foto5 {
         grid-row: span 1;
-        grid-column: span 1;
-        grid-column-start: auto;
-        grid-row-start: auto;
-    }
-
-    #foto6 {
-        grid-column: span 1;
-        grid-row: span 1;
-        grid-column-start: auto;
-        grid-row-start: auto;
+        /* Ocupa as duas colunas */
+        grid-column: span 2;
+        height: 30vh;
+        width: 100%;
     }
 
     /* Footer */
     footer {
-        padding: 3vh 0;
+        padding: 3vh 2vw;
         font-size: 2vh;
+    }
+
+    h1 {
+        font-size: 5vh;
+        margin-left: 5vw;
+    }
+}
+
+/* Desktop - Padrão (acima de 1025px) */
+
+@media (min-width: 1025px) {
+    header {
+        gap: 10vw;
+    }
+
+    nav {
+        gap: 8vw;
     }
 }
