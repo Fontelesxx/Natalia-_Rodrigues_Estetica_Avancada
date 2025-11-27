@@ -314,12 +314,11 @@ footer div h4 {
         height: 10vh;
         font-size: 1.7vh;
         flex-direction: row;
-        gap: 2vh;
     }
 
     header nav {
-        justify-content: flex-end;
-        gap: 2vw;
+        justify-content: end;
+        gap: 2vh;
     }
 
 
@@ -330,21 +329,13 @@ footer div h4 {
 
 
     #logo {
-        padding-left: 2vw;
+        padding-left: 2vh;
     }
 
     #imagem_logo {
         height: 30px;
     }
 
-
-    #imagem_de_fundo {
-        width: 100%;
-        background-size: cover;
-        background-position: center;
-        border-bottom-left-radius: 100px;
-
-    }
 
 
 
