@@ -228,7 +228,7 @@ p{
 
 /* Tablet */
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     /* Barra de Navegação */
     header {
         gap: 5vh;
@@ -276,7 +276,7 @@ p{
 }
 
 /* Celular */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
      /* Nav */
      body {
         font-size: 16px;
