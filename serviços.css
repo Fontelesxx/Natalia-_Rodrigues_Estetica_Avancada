@@ -242,7 +242,7 @@ footer div h4 {
 
 /* Responsividade */
 
-/* Celular */
+/* Tablet */
 
 @media (min-width: 769px) and (max-width: 1024px){
 
@@ -311,14 +311,14 @@ footer div h4 {
 
 /* Mobile (max-width: 767px) */
 @media (max-width: 767px) {
-    /* Nav*/
+     /* Nav */
      body {
         font-size: 16px;
     }
 
     header {
         height: 10vh;
-        font-size: 1.7vh;
+        font-size: 1.3vh;
         flex-direction: row;
     }
 
@@ -329,7 +329,7 @@ footer div h4 {
 
 
     header.scrolled {
-        font-size: 1.3vh;
+        font-size: 1vh;
         height: 6vh;
     }
 
@@ -341,6 +341,7 @@ footer div h4 {
     #imagem_logo {
         height: 30px;
     }
+
 
 
 /* Servico */
@@ -413,14 +414,24 @@ footer div h4 {
         font-size: 1rem;
     }
 
-    /* Rodapé */
+    /* Footer */
     footer {
-        flex-direction: column;
-        align-items: center;
+        font-size: 2vh;
         text-align: center;
+        flex-direction: column;
+        padding: 3vh 2vw;
     }
 
     footer div {
-        margin: 0.5rem 0;
+        margin-bottom: 3vh;
+        min-width: 100%;
+    }
+
+    footer div img {
+        height: 15vh;
+    }
+
+    footer div h4 {
+        margin-bottom: 1vh;
     }
 }

@@ -313,7 +313,7 @@ footer div h4 {
 
     header {
         height: 10vh;
-        font-size: 1.7vh;
+        font-size: 1.3vh;
         flex-direction: row;
     }
 
@@ -324,7 +324,7 @@ footer div h4 {
 
 
     header.scrolled {
-        font-size: 1.3vh;
+        font-size: 1vh;
         height: 6vh;
     }
 
