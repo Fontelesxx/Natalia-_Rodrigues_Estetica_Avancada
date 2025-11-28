@@ -326,7 +326,7 @@ footer div h4 {
         width: 90%;
         font-size: 1.8em;
         margin-bottom: 20px;
-        padding-top: 30px;
+        padding-top: 10px;
     }
 
     .info_section {
@@ -343,8 +343,8 @@ footer div h4 {
     }
 
     .icone_social {
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
         font-size: 1.4em;
     }
 

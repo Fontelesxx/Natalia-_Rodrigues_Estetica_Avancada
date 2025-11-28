@@ -436,23 +436,25 @@ footer div h4 {
 
 
     .imagens_clinica {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        grid-template-columns: none;
-        grid-template-rows: none;
-        grid-template-areas: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr  0.1fr 1fr;
+        grid-template-areas:
+        "foto1 foto2 foto3"
+        "foto4 foto2 foto3"
+        "foto4 foto5 foto5";
+        gap: 3vh;
+    
     }
 
     .imagens_clinica img {
-        width: 100%;
-        height: auto;
+        width: 50%;
+        height: 50%;
     }
 
     #foto1, #foto2, #foto3, #foto4, #foto5 {
-        width: 100%;
-        height: 35vh;
-        grid-area: unset;
+        width: 60%;
+        height: 50%;
     }
 
 
