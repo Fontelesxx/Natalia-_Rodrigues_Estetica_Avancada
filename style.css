@@ -427,7 +427,7 @@ footer div h4 {
         text-align: center;
     }
 
-    h1 {
+    #h1_clinica {
         font-size: 4vh;
         margin-bottom: 5vh;
         margin-left: 0;
@@ -489,36 +489,6 @@ footer div h4 {
         padding-right: 5vh;
         font-size: 2.5vh;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* <div class="tamanho_da_caixa"><img src="img/microagulhamento.jfif" alt="Microagulhamento">
-                        <div class="servicos_inicio_descricao">Microagulhamento</div>
-                    </div>
-                    <div class="tamanho_da_caixa"><img src="img/91832_00.webp" alt="Manta Detox" id="tamanho_da_manta">
-                        <div class="servicos_inicio_descricao">Manta Detox</div>
-                    </div>
-                    <div class="tamanho_da_caixa"><img src="img/sombrancelha.webp" alt="Sobrancelha">
-                        <div class="servicos_inicio_descricao">Sobrancelha</div>
-                    </div>
-                    <div class="tamanho_da_caixa"><img src="img/limpeza de pele.jfif" alt="Limpeza de pele">
-                        <div class="servicos_inicio_descricao">Limpeza de pele</div>
-                    </div>
-                    <div class="tamanho_da_caixa"><img src="img/ozonioterPIA.jfif" alt="Ozonioterapia">
-                        <div class="servicos_inicio_descricao">Ozonioterapia</div>
-                    </div> */
-
 
 
 
