@@ -441,20 +441,15 @@ footer div h4 {
         grid-template-rows: 1fr  0.1fr 1fr;
         grid-template-areas:
         "foto1 foto2 foto3"
-        "foto4 foto2 foto3"
+        "foto4 foto5 foto5"
         "foto4 foto5 foto5";
-        gap: 3vh;
-    
     }
 
-    .imagens_clinica img {
-        width: 50%;
-        height: 50%;
-    }
+   
 
     #foto1, #foto2, #foto3, #foto4, #foto5 {
-        width: 60%;
-        height: 50%;
+        width: 100%;
+        height: 20vh;
     }
 
 
@@ -558,50 +553,14 @@ footer div h4 {
 
     /* Imagens da Clínica (Grid) */
     #fotos_clinica {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto;
+        display: flex;
+        flex-direction: row;
     }
 
 
-    #foto1 {
-        grid-row: span 1;
-        grid-column: span 1;
-    }
 
-    #foto2 {
-        grid-column: span 1;
-        grid-row: span 1;
-        grid-column-start: auto;
-        grid-row-start: auto;
-    }
-
-    #foto3 {
-        grid-row: span 1;
-        grid-column: span 1;
-        grid-column-start: auto;
-        grid-row-start: auto;
-    }
-
-    #foto4 {
-        grid-row: span 1;
-        grid-column: span 1;
-        grid-column-start: auto;
-        grid-row-start: auto;
-    }
-
-    #foto5 {
-        grid-row: span 1;
-        grid-column: span 1;
-        grid-column-start: auto;
-        grid-row-start: auto;
-    }
-
-    #foto6 {
-        grid-column: span 1;
-        grid-row: span 1;
-        grid-column-start: auto;
-        grid-row-start: auto;
-    }
+    
+   
 
     /* Footer */
     footer {

@@ -1,0 +1,383 @@
+/* ========================================
+   Estilos para Página de Cadastro
+   Natália Rodrigues Estética Avançada
+   ======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e8d5c4 0%, #e8d5c4 50%, #d4c5b9 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+
+.signup-container {
+  width: 100%;
+  max-width: 480px;
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(107, 83, 68, 0.15);
+  overflow: hidden;
+  animation: slideUp 0.6s ease-out;
+}
+
+/* Header */
+
+header{
+    display: flex;
+    gap: 8vh;
+    justify-content: space-between;
+    height: 15vh;
+    align-items: center;
+    padding: 2vh;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: 0.4s;
+    font-size: 3vh;
+
+
+}
+
+
+
+nav {
+    display: flex;
+    gap: 3vh;
+    margin-right: 2vh;
+}
+
+
+
+.hover-underline-animation {
+    text-decoration: none;
+    color: #664020cc;
+}
+
+
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+}
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #664020cc;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+}
+
+.hover-underline-animation.left::after {
+    transform-origin: bottom right;
+}
+
+.hover-underline-animation.left:hover::after {
+    transform-origin: bottom left;
+}
+
+
+#logo {
+    padding-left: 10vh;
+    display: flex;
+    align-items: center;
+}
+
+#imagem_logo {
+    height: 65px;
+    border-radius: 10px;
+}
+
+
+/* Form Content */
+
+#signup-container{
+  padding-top: 200px;
+}
+
+.signup-content {
+  padding: 40px 30px;
+ 
+
+}
+
+
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b5344;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #e8d5c4;
+  border-radius: 12px;
+  font-size: 15px;
+  color: #333333;
+  background: #fafafa;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #a8d8d8;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(168, 216, 216, 0.1);
+}
+
+.form-group input::placeholder {
+  color: #b8a89f;
+}
+
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-row .form-group {
+  margin-bottom: 0;
+}
+
+
+.password-requirements {
+  background: #f5f5f5;
+  border-left: 4px solid #a8d8d8;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  font-size: 13px;
+  color: #6b5344;
+}
+
+.password-requirements ul {
+  list-style: none;
+  margin-top: 8px;
+}
+
+.password-requirements li {
+  padding: 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.password-requirements li::before {
+  content: '✓';
+  color: #a8d8d8;
+  font-weight: bold;
+}
+
+
+.terms-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 28px;
+  font-size: 13px;
+}
+
+.terms-checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  cursor: pointer;
+  accent-color: #a8d8d8;
+  flex-shrink: 0;
+}
+
+.terms-checkbox label {
+  cursor: pointer;
+  color: #6b5344;
+  line-height: 1.5;
+  margin: 0;
+  text-transform: none;
+  font-weight: 400;
+  letter-spacing: normal;
+}
+
+.terms-checkbox a {
+  color: #a8d8d8;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.terms-checkbox a:hover {
+  color: #6b5344;
+}
+
+/* Buttons */
+.signup-button {
+  width: 100%;
+  padding: 14px 24px;
+  background: linear-gradient(135deg, #6b5344 0%, #8b6f47 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.signup-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(107, 83, 68, 0.25);
+}
+
+.signup-button:active {
+  transform: translateY(0);
+}
+
+.signup-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 28px 0;
+  color: #d4c5b9;
+  font-size: 13px;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #e8d5c4;
+}
+
+.divider span {
+  padding: 0 12px;
+  color: #b8a89f;
+}
+
+/* Social Login */
+.social-login {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.social-button {
+  padding: 12px 16px;
+  border: 2px solid #e8d5c4;
+  background: #ffffff;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b5344;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.social-button:hover {
+  border-color: #a8d8d8;
+  background: #f5f5f5;
+  color: #a8d8d8;
+}
+
+/* Footer */
+.signup-footer {
+  padding: 24px 30px;
+  background: #fafafa;
+  text-align: center;
+  border-top: 1px solid #e8d5c4;
+}
+
+.signup-footer p {
+  font-size: 14px;
+  color: #6b5344;
+}
+
+.login-link {
+  color: #a8d8d8;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.login-link:hover {
+  color: #6b5344;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .signup-container {
+    border-radius: 16px;
+  }
+
+  .signup-header {
+    padding: 30px 20px;
+  }
+
+  .signup-header h1 {
+    font-size: 24px;
+  }
+
+  .signup-content {
+    padding: 30px 20px;
+  }
+
+  .signup-footer {
+    padding: 20px 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .form-row .form-group {
+    margin-bottom: 24px;
+  }
+
+  .social-login {
+    grid-template-columns: 1fr;
+  }
+}
