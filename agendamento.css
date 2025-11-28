@@ -391,11 +391,78 @@ footer div h4 {
 /* Tablet */
 
 @media (min-width: 768px) and (max-width: 1024px){
+   /* Nav */
+    header {
+        gap: 5vh;
+        padding-right: 5vh;
+        font-size: 2.5vh;
+    }
 
+    #logo {
+        padding-left: 5vh;
+    }
+
+    nav {
+        gap: 4vh;
+    }
+
+    /* Rodapé */
+    footer {
+        justify-content: space-between;
+        padding: 2rem 3%;
+    }
 }
 
 
 /* Mobile (max-width: 767px) */
 @media (max-width: 767px) {
+  /* Nav */
+     body {
+        font-size: 16px;
+    }
 
+    header {
+        height: 10vh;
+        font-size: 1.3vh;
+        flex-direction: row;
+    }
+
+    header nav {
+        justify-content: end;
+        gap: 2vh;
+    }
+
+
+    header.scrolled {
+        font-size: 1vh;
+        height: 6vh;
+    }
+
+
+    #logo {
+        padding-left: 2vh;
+    }
+
+    #imagem_logo {
+        height: 30px;
+    }
+
+
+    /* Rodapé */
+    footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 5%;
+        text-align: center;
+    }
+
+    footer > div {
+        width: 100%;
+        margin: 15px 0;
+        max-width: none;
+    }
+
+    footer img {
+        margin-bottom: 10px;
+    }
 }
