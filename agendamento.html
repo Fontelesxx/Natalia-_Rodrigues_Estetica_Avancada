@@ -1,560 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agendamento - Natália Rodrigues Estética Avançada</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Reset e Base */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <link rel="stylesheet" href="agendamento.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #F5E6D3;
-            color: #1A1A1A;
-            line-height: 1.6;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Playfair Display', serif;
-        }
-
-        /* Navegação */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 50;
-            background-color: #8B7355;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .nav-container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .nav-logo {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .nav-logo-box {
-            width: 40px;
-            height: 40px;
-            background-color: #D4A574;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: #8B7355;
-        }
-
-        .nav-logo-text {
-            color: white;
-            font-family: 'Playfair Display', serif;
-            font-size: 1.125rem;
-            font-weight: bold;
-            display: none;
-        }
-
-        @media (min-width: 640px) {
-            .nav-logo-text {
-                display: inline;
-            }
-        }
-
-        .nav-links {
-            display: none;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        @media (min-width: 768px) {
-            .nav-links {
-                display: flex;
-            }
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 0.875rem;
-            border-bottom: 2px solid transparent;
-            transition: all 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: #D4A574;
-            border-bottom-color: #D4A574;
-        }
-
-        .nav-links a.active {
-            border-bottom-color: #D4A574;
-        }
-
-        /* Menu Mobile */
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        @media (max-width: 767px) {
-            .mobile-menu-btn {
-                display: block;
-            }
-        }
-
-        /* Container */
-        .container {
-            width: 100%;
-            margin-left: auto;
-            margin-right: auto;
-            padding-left: 1rem;
-            padding-right: 1rem;
-        }
-
-        @media (min-width: 640px) {
-            .container {
-                padding-left: 1.5rem;
-                padding-right: 1.5rem;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .container {
-                padding-left: 2rem;
-                padding-right: 2rem;
-                max-width: 1280px;
-            }
-        }
-
-        /* Main Content */
-        main {
-            min-height: 100vh;
-            background-color: #F5E6D3;
-            padding-top: 6rem;
-            padding-bottom: 3rem;
-        }
-
-        .content-wrapper {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* Header */
-        .page-header {
-            text-align: center;
-            margin-bottom: 3rem;
-            animation: fadeIn 0.5s ease-in-out;
-        }
-
-        .header-line {
-            height: 4px;
-            width: 64px;
-            background-color: #8B7355;
-            margin: 0 auto 1rem;
-        }
-
-        .page-header h1 {
-            font-size: 2.25rem;
-            font-weight: 700;
-            color: #8B7355;
-            margin-bottom: 1rem;
-        }
-
-        @media (min-width: 768px) {
-            .page-header h1 {
-                font-size: 3rem;
-            }
-        }
-
-        .page-header p {
-            color: #666;
-            font-size: 1.125rem;
-        }
-
-        /* Form */
-        .form-container {
-            background-color: white;
-            border-radius: 1rem;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            padding: 2rem;
-            animation: fadeIn 0.5s ease-in-out;
-        }
-
-        @media (min-width: 768px) {
-            .form-container {
-                padding: 3rem;
-            }
-        }
-
-        .form-section {
-            margin-bottom: 2.5rem;
-        }
-
-        .form-section-header {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .form-section-header h2 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #8B7355;
-            margin: 0;
-        }
-
-        .form-section-icon {
-            color: #8B7355;
-            width: 24px;
-            height: 24px;
-        }
-
-        .form-divider {
-            height: 1px;
-            background-color: #D4B5A0;
-            margin: 2.5rem 0;
-        }
-
-        /* Form Fields */
-        .form-group {
-            margin-bottom: 1rem;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1rem;
-        }
-
-        @media (min-width: 768px) {
-            .form-row {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        label {
-            display: block;
-            font-weight: 600;
-            color: #8B7355;
-            margin-bottom: 0.5rem;
-            font-size: 0.875rem;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        input[type="tel"],
-        input[type="date"],
-        select,
-        textarea {
-            width: 100%;
-            padding: 0.75rem 1rem;
-            border: none;
-            border-bottom: 2px solid #D4B5A0;
-            background-color: #F5E6D3;
-            font-family: 'Poppins', sans-serif;
-            font-size: 1rem;
-            color: #1A1A1A;
-            transition: all 0.3s ease;
-        }
-
-        input[type="text"]:focus,
-        input[type="email"]:focus,
-        input[type="tel"]:focus,
-        input[type="date"]:focus,
-        select:focus,
-        textarea:focus {
-            outline: none;
-            border-bottom-color: #8B7355;
-            background-color: white;
-        }
-
-        textarea {
-            border: 2px solid #D4B5A0;
-            border-radius: 0.5rem;
-            resize: none;
-            min-height: 120px;
-        }
-
-        textarea:focus {
-            border-color: #8B7355;
-        }
-
-        /* Buttons */
-        .form-buttons {
-            display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        button {
-            flex: 1;
-            padding: 0.75rem 1.5rem;
-            border: none;
-            border-radius: 0.5rem;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 1rem;
-        }
-
-        .btn-submit {
-            background-color: #8B7355;
-            color: white;
-        }
-
-        .btn-submit:hover {
-            background-color: #6B5344;
-            transform: scale(1.02);
-        }
-
-        .btn-submit:active {
-            transform: scale(0.98);
-        }
-
-        .btn-reset {
-            background-color: #D4B5A0;
-            color: #8B7355;
-        }
-
-        .btn-reset:hover {
-            background-color: #C19A6B;
-        }
-
-        .form-info {
-            text-align: center;
-            font-size: 0.875rem;
-            color: #666;
-            margin-top: 1.5rem;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #1A1A1A;
-            color: white;
-            padding: 3rem 1rem;
-            margin-top: 2rem;
-        }
-
-        .footer-container {
-            max-width: 1280px;
-            margin: 0 auto;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        @media (min-width: 768px) {
-            .footer-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        .footer-section {
-            text-align: center;
-        }
-
-        @media (min-width: 768px) {
-            .footer-section:first-child {
-                text-align: left;
-            }
-
-            .footer-section:last-child {
-                text-align: right;
-            }
-        }
-
-        .footer-logo {
-            width: 48px;
-            height: 48px;
-            background-color: #D4A574;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: #8B7355;
-            margin-bottom: 1rem;
-        }
-
-        .footer-section h3 {
-            font-size: 1.125rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-section p {
-            font-size: 0.875rem;
-            color: #ccc;
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-section a {
-            color: #D4A574;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-section a:hover {
-            color: #E8C4C4;
-        }
-
-        .footer-divider {
-            border-top: 1px solid #8B7355;
-            padding-top: 2rem;
-            margin-top: 2rem;
-        }
-
-        .footer-divider p {
-            text-align: center;
-            font-size: 0.875rem;
-            color: #999;
-        }
-
-        /* Animações */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes scaleIn {
-            from {
-                opacity: 0;
-                transform: scale(0.8);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        .animate-fade-in {
-            animation: fadeIn 0.5s ease-in-out;
-        }
-
-        /* Success Message */
-        .success-message {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 100;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .success-message.show {
-            display: flex;
-        }
-
-        .success-content {
-            background-color: #F5E6D3;
-            border-radius: 1rem;
-            padding: 2rem;
-            text-align: center;
-            max-width: 400px;
-            animation: scaleIn 0.5s ease-out;
-        }
-
-        .success-icon {
-            width: 80px;
-            height: 80px;
-            background-color: #8B7355;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            animation: scaleIn 0.5s ease-out;
-        }
-
-        .success-icon::after {
-            content: "✓";
-            color: white;
-            font-size: 2rem;
-            font-weight: bold;
-        }
-
-        .success-content h2 {
-            font-size: 1.875rem;
-            color: #8B7355;
-            margin-bottom: 1rem;
-        }
-
-        .success-content p {
-            color: #666;
-            margin-bottom: 1rem;
-        }
-    </style>
 </head>
+
 <body>
     <!-- Navegação -->
-    <nav>
-        <div class="nav-container">
-            <div class="nav-logo">
-                <div class="nav-logo-box">NR</div>
-                <span class="nav-logo-text">Natália Rodrigues</span>
-            </div>
-            <div class="nav-links">
-                <a href="#inicio">Início</a>
-                <a href="#servicos">Serviços</a>
-                <a href="#contatos">Contatos</a>
-                <a href="#agendamento" class="active">Agendamento</a>
-            </div>
-            <button class="mobile-menu-btn">☰</button>
+    <header id="barra_navegacao">
+        <div id="logo"><a href="index.html"><img src="img/logo sem fundo.png" alt="Logo da empresa"
+                    id="imagem_logo"></a>
         </div>
-    </nav>
+        <nav>
+            <ul><a href="index.html" class="hover-underline-animation left">Início</a></ul>
+            <ul><a href="servicos.html" class="hover-underline-animation left">Serviços</a></ul>
+            <ul><a href="contatos.html" class="hover-underline-animation left">Contatos</a></ul>
+            <ul><a href="agendamento.html" class="hover-underline-animation left">Agendamento</a></ul>
+        </nav>
+    </header>
 
     <!-- Conteúdo Principal -->
     <main>
-        <div class="container">
+        <div class="container" data-aos="zoom-in" data-aos-duration="2000">
             <div class="content-wrapper">
-                <!-- Header -->
                 <div class="page-header">
                     <div class="header-line"></div>
                     <h1>Agende seu Horário</h1>
@@ -645,7 +119,8 @@
 
                         <div class="form-group">
                             <label for="observacoes">Mensagem (opcional)</label>
-                            <textarea id="observacoes" name="observacoes" placeholder="Deixe aqui alguma informação importante sobre seu agendamento..."></textarea>
+                            <textarea id="observacoes" name="observacoes"
+                                placeholder="Deixe aqui alguma informação importante sobre seu agendamento..."></textarea>
                         </div>
                     </div>
 
@@ -662,32 +137,19 @@
     </main>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <div class="footer-logo">NR</div>
-                    <h3>NATÁLIA RODRIGUES</h3>
-                    <p>ESTÉTICA AVANÇADA</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Endereço</h3>
-                    <p>Rua Maria Câncida 1269<br>Vila Guilherme</p>
-                </div>
-                <div class="footer-section">
-                    <div>
-                        <h3>Contato</h3>
-                        <p>11 96453-9393</p>
-                    </div>
-                    <div style="margin-top: 1rem;">
-                        <h3>E-mail</h3>
-                        <a href="mailto:natalia.rodrigueslopes@yahoo.com.br">natalia.rodrigueslopes@yahoo.com.br</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-divider">
-                <p>© 2024 Natália Rodrigues Estética Avançada. Todos os direitos reservados.</p>
-            </div>
+    <footer data-aos="fade-right" data-aos-duration="1000">
+        <div><img src="img/Logo.jpeg" alt="Logo"></div>
+        <div>
+            <h4>Endereço</h4>
+            <p>Rua Maria Cândida 1269 Vila Guilherme</p>
+        </div>
+        <div>
+            <h4>Contato</h4>
+            <p>11 96453-9393</p>
+        </div>
+        <div>
+            <h4>E-mail</h4>
+            <p>natalia.rodrigueslopes@yahoo.com.br</p>
         </div>
     </footer>
 
@@ -696,11 +158,32 @@
         <div class="success-content">
             <div class="success-icon"></div>
             <h2>Agendamento Confirmado!</h2>
-            <p>Seus dados foram recebidos com sucesso. Você será redirecionado para o WhatsApp para finalizar o agendamento.</p>
+            <p>Seus dados foram recebidos com sucesso. Você será redirecionado para o WhatsApp para finalizar o
+                agendamento.</p>
         </div>
     </div>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 
     <script>
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('barra_navegacao');
+            if (!header) return;
+            if (window.scrollY > 40) header.classList.add('scrolled');
+            else header.classList.remove('scrolled');
+        })// Animação nav
+
+
+
+
         const form = document.getElementById('agendamentoForm');
         const successMessage = document.getElementById('successMessage');
 
@@ -733,20 +216,19 @@
 
             // Redirecionar para WhatsApp após 2 segundos
             setTimeout(() => {
-                const whatsappUrl = `https://wa.me/5511964539393?text=${encodeURIComponent(mensagem)}`;
+                const whatsappUrl = `https://wa.me/5511948444087?text=${encodeURIComponent(mensagem)}`;
                 window.open(whatsappUrl, '_blank');
-                
+
                 // Limpar formulário e fechar mensagem de sucesso
                 form.reset();
                 successMessage.classList.remove('show');
             }, 2000);
         });
 
-        // Menu mobile (placeholder para funcionalidade futura)
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        mobileMenuBtn.addEventListener('click', () => {
-            console.log('Menu mobile clicado');
-        });
+
+
+        AOS.init();
     </script>
 </body>
+
 </html>
