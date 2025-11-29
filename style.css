@@ -323,6 +323,7 @@ a {
     height: 40vh;
     width: 40vh;
     border-radius: 20px;
+    transition: transform 0.4s ease;
 }
 
 #foto2 {
@@ -330,6 +331,7 @@ a {
     height: 50vh;
     width: 40vh;
     border-radius: 20px;
+    transition: transform 0.4s ease;
 
 }
 
@@ -338,6 +340,7 @@ a {
     height: 50vh;
     width: 40vh;
     border-radius: 20px;
+    transition: transform 0.4s ease;
 }
 
 #foto4 {
@@ -345,6 +348,7 @@ a {
     height: 40vh;
     width: 40vh;
     border-radius: 20px;
+    transition: transform 0.4s ease;
 }
 
 #foto5 {
@@ -352,8 +356,29 @@ a {
     border-radius: 20px;
     height: 32vh;
     width: 85vh;
+    transition: transform 0.4s ease;
 }
 
+
+#foto1:hover {
+    transform: scale(1.1);
+}
+
+#foto2:hover {
+    transform: scale(1.1);
+}
+
+#foto3:hover {
+    transform: scale(1.1);
+}
+
+#foto4:hover {
+    transform: scale(1.1);
+}
+
+#foto5:hover {
+    transform: scale(1.1);
+}
 
 /*Feedbacks*/
 
@@ -450,16 +475,21 @@ a {
 
 footer {
     display: flex;
-    background-color: black;
-    color: #ffd5d7;
+    background-image: url(img/fundo_footer.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    background-blend-mode: darken;
+    color: #ffffff;
     align-items: center;
     text-align: center;
     justify-content: space-evenly;
-
+    height: 29vh;
 }
 
 footer div img {
-    height: 30vh;
+    height: 20vh;
+    border-radius: 6vh;
 }
 
 footer div h4 {
@@ -503,6 +533,10 @@ footer div h4 {
         height: 30px;
     }
 
+
+    #imagem_de_fundo {
+        height: 40vh;
+    }
 
 
 
@@ -596,12 +630,12 @@ footer div h4 {
         margin: 0 auto;
     }
 
-    #cuide_centro{
+    #cuide_centro {
         width: 100%;
     }
 
     .cuide-image img {
-       height: 75%;
+        height: 75%;
         width: 90%;
     }
 
@@ -616,7 +650,7 @@ footer div h4 {
         line-height: 1.1;
     }
 
-    .cuide-content{
+    .cuide-content {
         width: 80%;
     }
 
@@ -655,23 +689,25 @@ footer div h4 {
 
 
 
-    #foto1{
-        width: 100%;
-        height: 15vh;
-        transition: transform 0.4s ease;
-    }
-    #foto2{
-        width: 100%;
-        height: 15vh;
-        transition: transform 0.4s ease;
-    }
-    #foto3{
+    #foto1 {
         width: 100%;
         height: 15vh;
         transition: transform 0.4s ease;
     }
 
-    #foto4{
+    #foto2 {
+        width: 100%;
+        height: 15vh;
+        transition: transform 0.4s ease;
+    }
+
+    #foto3 {
+        width: 100%;
+        height: 15vh;
+        transition: transform 0.4s ease;
+    }
+
+    #foto4 {
         width: 100%;
         height: 15vh;
         transition: transform 0.4s ease;
@@ -683,31 +719,31 @@ footer div h4 {
         transition: transform 0.4s ease;
     }
 
-    #foto1:hover{
-        transform: scale(0.7);
+    #foto1:hover {
+        transform: scale(1.1);
     }
 
-    #foto2:hover{
-        transform: scale(0.7);
+    #foto2:hover {
+        transform: scale(1.1);
     }
 
-    #foto3:hover{
-        transform: scale(0.7);
+    #foto3:hover {
+        transform: scale(1.1);
     }
 
-    #foto4:hover{
-        transform: scale(0.7);
+    #foto4:hover {
+        transform: scale(1.1);
     }
 
     #foto5:hover {
-        transform: scale(0.7);
+        transform: scale(1.1);
     }
 
 
 
     /* Feedback */
 
-     #feedback-section {
+    #feedback-section {
         padding: 70px 5%;
     }
 
@@ -733,6 +769,7 @@ footer div h4 {
         text-align: center;
         flex-direction: column;
         padding: 3vh 2vw;
+        height: 80vh;
     }
 
     footer div {
@@ -858,7 +895,7 @@ footer div h4 {
 
     /* Feedback */
 
-     .feedback-title {
+    .feedback-title {
         font-size: 32px;
     }
 
@@ -876,5 +913,8 @@ footer div h4 {
     footer {
         padding: 3vh 0;
         font-size: 2vh;
+    }
+    footer div img{
+        height: 15vh;
     }
 }

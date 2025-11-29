@@ -559,15 +559,21 @@ nav {
 /* Footer */
    footer {
     display: flex;
-    background-color: black;
-    color: #ffd5d7;
+    background-image: url(img/fundo_footer.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    background-blend-mode: darken;
+    color: #ffffff;
     align-items: center;
     text-align: center;
     justify-content: space-evenly;
+    height: 29vh;
 }
 
 footer div img {
-    height: 30vh;
+    height: 20vh;
+    border-radius: 6vh;
 }
 
 footer div h4 {
@@ -624,10 +630,11 @@ footer div h4 {
     footer {
         justify-content: space-between;
         padding: 25px 3%;
+        font-size: 2vh;
     }
 
-    footer > div {
-        margin: 10px 10px;
+    footer div img{
+        height: 15vh;
     }
 }
 
@@ -714,6 +721,7 @@ footer div h4 {
         text-align: center;
         flex-direction: column;
         padding: 3vh 2vw;
+        height: 80vh;
     }
 
     footer div {

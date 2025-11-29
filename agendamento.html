@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agendamento - Natália Rodrigues Estética Avançada</title>
     <link rel="stylesheet" href="agendamento.css">
+    <link rel="shortcut icon" href="img/logo sem fundo.png" type="image/x-icon">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
@@ -211,15 +212,15 @@
             // Mostrar mensagem de sucesso
             successMessage.classList.add('show');
 
-            // Redirecionar para WhatsApp após 2 segundos
+            // Redirecionar para WhatsApp após 5 segundos
             setTimeout(() => {
-                const whatsappUrl = `https://wa.me/5511948444087?text=${encodeURIComponent(mensagem)}`;
+                const whatsappUrl = `https://wa.me/5511964539393?text=${encodeURIComponent(mensagem)}`;
                 window.open(whatsappUrl, '_blank');
 
                 // Limpar formulário e fechar mensagem de sucesso
                 form.reset();
                 successMessage.classList.remove('show');
-            }, 2000);
+            }, 5000);
         });
 
 
