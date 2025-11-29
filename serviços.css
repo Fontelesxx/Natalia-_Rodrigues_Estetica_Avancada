@@ -135,6 +135,7 @@ nav {
     align-items: center;
     height: 70vh;
     margin-bottom: 0px;
+    margin-left: 4vh;
     
 }
 
@@ -144,6 +145,7 @@ nav {
 
 .servico-section.reverse {
     flex-direction: row-reverse;
+    margin-right: 4vh;
 }
 
 .servico-image {
