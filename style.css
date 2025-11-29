@@ -607,7 +607,8 @@ footer div h4 {
 
     #cuide-section {
         width: 95%;
-        margin: 0 auto;
+        margin: 0 auto 0 auto;
+        padding: 0 auto 0 auto;
     }
 
     .cuide-title {
@@ -683,23 +684,23 @@ footer div h4 {
     }
 
     #foto1:hover{
-        transform: scale(1.1);
+        transform: scale(0.7);
     }
 
     #foto2:hover{
-        transform: scale(1.1);
+        transform: scale(0.7);
     }
 
     #foto3:hover{
-        transform: scale(1.1);
+        transform: scale(0.7);
     }
 
     #foto4:hover{
-        transform: scale(1.1);
+        transform: scale(0.7);
     }
 
     #foto5:hover {
-        transform: scale(1.1);
+        transform: scale(0.7);
     }
 
 
