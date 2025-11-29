@@ -593,6 +593,11 @@ footer div h4 {
         text-align: center;
         gap: 25px;
         width: 100%;
+        margin: 0 auto;
+    }
+
+    #cuide_centro{
+        width: 100%;
     }
 
     .cuide-image img {
@@ -602,6 +607,7 @@ footer div h4 {
 
     #cuide-section {
         width: 95%;
+        margin: 0 auto;
     }
 
     .cuide-title {
@@ -677,23 +683,23 @@ footer div h4 {
     }
 
     #foto1:hover{
-        transform: scale(1.3);
+        transform: scale(1.1);
     }
 
     #foto2:hover{
-        transform: scale(1.3);
+        transform: scale(1.1);
     }
 
     #foto3:hover{
-        transform: scale(1.3);
+        transform: scale(1.1);
     }
 
     #foto4:hover{
-        transform: scale(1.3);
+        transform: scale(1.1);
     }
 
     #foto5:hover {
-        transform: scale(1.3);
+        transform: scale(1.1);
     }
 
 
