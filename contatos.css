@@ -286,6 +286,9 @@ nav {
     .card{
         width: 90%;
     }
+    .card p{
+        font-size: 0.975rem;
+    }
 }
 
 .card p {
