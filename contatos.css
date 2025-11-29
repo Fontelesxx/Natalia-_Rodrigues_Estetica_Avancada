@@ -295,7 +295,7 @@ nav {
 /* Links Sociais */
 .social-links {
     display: flex;
-    gap: 0.75rem;
+    gap: 3vh;
     margin-top: 1rem;
 }
 
@@ -305,13 +305,14 @@ nav {
     justify-content: center;
     width: 2.5rem;
     height: 2.5rem;
-    border-radius: 50%;
-    color: #ffffff;
-    text-decoration: none;
     transition: all 0.3s ease;
-    font-size: 1.25rem;
 }
 
+
+.icone{
+    height: 100%;
+    width: 100%;
+}
 
 
 .social-link.whatsapp:hover {
