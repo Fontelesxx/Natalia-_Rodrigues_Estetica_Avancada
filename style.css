@@ -247,7 +247,7 @@ a {
 }
 
 .cuide-content {
-    max-width: 550px;
+    width: 60%;
 }
 
 .cuide-subtitle {
@@ -595,8 +595,12 @@ footer div h4 {
     }
 
     .cuide-image img {
-        max-width: 330px;
+       height: 75%;
         width: 90%;
+    }
+
+    #cuide-section {
+        width: 95%;
     }
 
     .cuide-title {
