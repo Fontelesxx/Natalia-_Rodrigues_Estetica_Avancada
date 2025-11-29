@@ -209,6 +209,83 @@ a {
 
 }
 
+/* ==== SEÇÃO CUIDE DE VOCÊ ==== */
+
+#cuide-section {
+    width: 80%;
+    padding: 80px 5%;
+    background-image: url(img/foto5.jfif);
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: darken;
+    margin: 10vh;
+    border-radius: 30px;
+    font-family: "Noto Serif Hebrew", serif;
+    ;
+}
+
+#cuide_centro {
+    display: flex;
+    justify-content: center;
+}
+
+.cuide-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cuide-image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 12px;
+    object-fit: cover;
+    height: 55vh;
+}
+
+.cuide-content {
+    max-width: 550px;
+}
+
+.cuide-subtitle {
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: #B68C6B;
+    text-transform: uppercase;
+}
+
+.cuide-title {
+    font-size: 48px;
+    font-weight: 600;
+    margin: 10px 0 20px;
+    color: #ddbda7;
+}
+
+.cuide-content p {
+    color: #ffffff;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.cuide-btn {
+    display: inline-block;
+    background: #25D366;
+    color: #fff;
+    padding: 12px 26px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.cuide-btn:hover {
+    background: #1eb656;
+}
+
+
 
 /* Imagens da clinica */
 
@@ -229,54 +306,142 @@ a {
 }
 
 
-.imagens_clinica{
+.imagens_clinica {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr  0.1fr 1fr;
+    grid-template-rows: 1fr 0.1fr 1fr;
     grid-template-areas:
-    "foto1 foto2 foto3"
-    "foto4 foto2 foto3"
-    "foto4 foto5 foto5";
+        "foto1 foto2 foto3"
+        "foto4 foto2 foto3"
+        "foto4 foto5 foto5";
     gap: 3vh;
 }
 
 
-#foto1{
+#foto1 {
     grid-area: foto1;
     height: 40vh;
     width: 40vh;
     border-radius: 20px;
 }
 
-#foto2{
+#foto2 {
     grid-area: foto2;
     height: 50vh;
     width: 40vh;
     border-radius: 20px;
-   
+
 }
 
-#foto3{
+#foto3 {
     grid-area: foto3;
     height: 50vh;
     width: 40vh;
     border-radius: 20px;
 }
 
-#foto4{
+#foto4 {
     grid-area: foto4;
     height: 40vh;
     width: 40vh;
     border-radius: 20px;
 }
 
-#foto5{
+#foto5 {
     grid-area: foto5;
     border-radius: 20px;
     height: 32vh;
     width: 85vh;
 }
 
+
+/*Feedbacks*/
+
+#feedback-section {
+    text-align: center;
+    padding: 90px 5%;
+    background: #ddbda7;
+}
+
+.feedback-subtitle {
+    color: #B68C6B;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.feedback-title {
+    font-size: 42px;
+    color: #1A1A1A;
+    margin-bottom: 40px;
+}
+
+.feedback-slider {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.feedback-item {
+    width: 100%;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 20px;
+}
+
+.feedback-item.active {
+    opacity: 1;
+    transform: translateX(0);
+    position: relative;
+}
+
+.feedback-photo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.feedback-item h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #1A1A1A;
+}
+
+.feedback-item p {
+    color: #444;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+/* PONTINHOS */
+.feedback-dots {
+    margin-top: 25px;
+}
+
+.feedback-dots .dot {
+    width: 10px;
+    height: 10px;
+    background: #d6d6d6;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: 0.3s;
+}
+
+.feedback-dots .dot.active {
+    background: #B68C6B;
+    transform: scale(1.2);
+}
 
 
 
@@ -306,8 +471,9 @@ footer div h4 {
 /* Celular */
 
 @media (max-width: 767px) {
- /* Nav */
-     body {
+
+    /* Nav */
+    body {
         font-size: 16px;
     }
 
@@ -387,7 +553,7 @@ footer div h4 {
 
     /* Servicos inicio */
 
-    #servicos_inicio{
+    #servicos_inicio {
         height: auto;
         width: 90%;
         display: grid;
@@ -398,32 +564,59 @@ footer div h4 {
     }
 
 
-    #servicos_inicio > a {
+    #servicos_inicio>a {
         flex: unset;
         min-width: unset;
     }
 
-    a{
+    a {
         width: 100%;
         display: flex;
         justify-content: center;
     }
 
 
-    #servicos_inicio div img{
+    #servicos_inicio div img {
         width: 65%;
         height: 10vh;
     }
 
-    #tamanho_da_manta{
+    #tamanho_da_manta {
         height: 16vh;
     }
 
 
-    
+    /* Cuide de voce */
+
+    .cuide-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .cuide-image img {
+        max-width: 330px;
+        width: 90%;
+    }
+
+    .cuide-title {
+        font-size: 34px;
+        line-height: 1.1;
+    }
+
+    .cuide-content p {
+        font-size: 14px;
+    }
+
+    .cuide-btn {
+        padding: 12px 24px;
+        font-size: 15px;
+    }
+
+
 
     /* Imagens da Clínica */
-    #clinica{
+    #clinica {
         padding: 5vh 5vw;
         text-align: center;
     }
@@ -438,19 +631,46 @@ footer div h4 {
     .imagens_clinica {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr  0.1fr 1fr;
+        grid-template-rows: 1fr 0.1fr 1fr;
         grid-template-areas:
-        "foto1 foto2 foto3"
-        "foto4 foto5 foto5"
-        "foto4 foto5 foto5";
+            "foto1 foto2 foto3"
+            "foto4 foto5 foto5"
+            "foto4 foto5 foto5";
     }
 
-   
 
-    #foto1, #foto2, #foto3, #foto4, #foto5 {
+
+    #foto1,
+    #foto2,
+    #foto3,
+    #foto4,
+    #foto5 {
         width: 100%;
         height: 20vh;
     }
+
+
+
+    /* Feedback */
+
+     #feedback-section {
+        padding: 70px 5%;
+    }
+
+    .feedback-title {
+        font-size: 28px;
+    }
+
+    .feedback-item p {
+        font-size: 14px;
+    }
+
+    .feedback-photo {
+        width: 70px;
+        height: 70px;
+    }
+
+
 
 
     /* Footer */
@@ -534,7 +754,7 @@ footer div h4 {
 
     /* Servicos inicio */
 
-      #servicos_inicio {
+    #servicos_inicio {
         height: 60vh;
         width: 70%vh;
         text-align: center;
@@ -551,6 +771,30 @@ footer div h4 {
     }
 
 
+    /* Cuide de voce */
+    #cuide-section {
+        padding: 60px 5%;
+    }
+
+    .cuide-container {
+        gap: 30px;
+    }
+
+    .cuide-title {
+        font-size: 40px;
+    }
+
+    .cuide-content p {
+        font-size: 15px;
+    }
+
+    .cuide-image img {
+        max-width: 400px;
+    }
+
+
+
+
     /* Imagens da Clínica (Grid) */
     #fotos_clinica {
         display: flex;
@@ -558,9 +802,21 @@ footer div h4 {
     }
 
 
+    /* Feedback */
 
-    
-   
+     .feedback-title {
+        font-size: 32px;
+    }
+
+    .feedback-item p {
+        font-size: 15px;
+    }
+
+    .feedback-photo {
+        width: 80px;
+        height: 80px;
+    }
+
 
     /* Footer */
     footer {

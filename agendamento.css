@@ -124,7 +124,7 @@ nav {
 /* Main Content */
 main {
   min-height: 100vh;
-  background-color: #492005;
+  background-color: #5a3217;
   padding-top: 6rem;
   padding-bottom: 3rem;
 }
@@ -233,7 +233,7 @@ textarea {
   background-color: #ffdfbf;
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
-  color: #1A1A1A;
+  color: #666;
   transition: all 0.3s ease;
 }
 
