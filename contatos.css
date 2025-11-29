@@ -282,6 +282,12 @@ nav {
     }
 }
 
+@media (max-width: 767px){
+    .card{
+        width: 90%;
+    }
+}
+
 .card p {
     font-size: 1.125rem;
     color: rgba(61, 40, 23, 0.8);

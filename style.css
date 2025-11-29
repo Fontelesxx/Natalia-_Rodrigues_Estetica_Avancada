@@ -536,6 +536,7 @@ footer div h4 {
 
     #imagem_de_fundo {
         height: 40vh;
+        border-bottom-left-radius: 140px;
     }
 
 
@@ -547,7 +548,7 @@ footer div h4 {
     }
 
     #slogan {
-        font-size: 2vh;
+        font-size: 3vh;
         width: 70vw;
         margin-top: 0;
         text-align: center;
