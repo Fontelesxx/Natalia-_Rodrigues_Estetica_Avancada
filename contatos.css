@@ -289,6 +289,9 @@ nav {
     .card p{
         font-size: 0.975rem;
     }
+    #email{
+        width: 90%;
+    }
 }
 
 .card p {
