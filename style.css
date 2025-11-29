@@ -592,6 +592,7 @@ footer div h4 {
         flex-direction: column;
         text-align: center;
         gap: 25px;
+        width: 100%;
     }
 
     .cuide-image img {
@@ -606,6 +607,10 @@ footer div h4 {
     .cuide-title {
         font-size: 34px;
         line-height: 1.1;
+    }
+
+    .cuide-content{
+        width: 80%;
     }
 
     .cuide-content p {
@@ -650,7 +655,16 @@ footer div h4 {
     #foto4,
     #foto5 {
         width: 100%;
-        height: 20vh;
+        height: 15vh;
+        transition: transform 0.4s ease;
+    }
+
+    #foto1,
+    #foto2,
+    #foto3,
+    #foto4,
+    #foto5:hover {
+        transform: scale(1.5);
     }
 
 
