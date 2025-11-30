@@ -603,10 +603,10 @@ footer div h4 {
         height: auto;
         width: 90%;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         margin: 0 auto;
         padding: 2vh;
-        gap: 2vh;
+        gap: 7vh;
     }
 
 
@@ -622,10 +622,7 @@ footer div h4 {
     }
 
 
-    #servicos_inicio div img {
-        width: 65%;
-        height: 65%;
-    }
+    
 
 
     /* Cuide de voce */

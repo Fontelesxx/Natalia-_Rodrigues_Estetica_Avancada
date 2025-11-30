@@ -390,24 +390,25 @@ footer div h4 {
 
     #servicos_s h1 {
         font-size: 2rem;
-        padding: 1rem;
+        padding-left: 6vh;
     }
 
     /* Seções de Serviço */
     .servico-section {
         margin: 40px 60px;
         flex-direction: column;
+        text-align: center;
+        min-width: auto;
     }
 
     .servico-section.reverse{
+        margin: 40px 60px;
         flex-direction: column;
+        text-align: center;
+        min-width: auto;
     }
 
-    .servico-section {
-        min-height: auto;
-        margin: 30px 3%;
-        text-align: center;
-    }
+    
 
     
     .servico-image {
