@@ -13,9 +13,10 @@
 }
 
 body {
-    background-color: #491f06;
-    background-position: center;
-    color: #ffffff;
+    background-image: url(img/fundo_principal.jfif);
+    background-size: cover;
+
+    color: #181616;
     font-family: "Noto Serif Hebrew", serif;
 }
 
@@ -121,7 +122,7 @@ nav {
 }
 
 #servicos_s h1{
-    background-color: #491f067e;
+    background-color: #f9e7e95b;
     width:140vh ;
     border-radius: 0 40px 0 0;
     height: 70vh;
@@ -150,10 +151,10 @@ nav {
 
 .servico-image {
     width: 40%;
-    height: 60vh;
+    height: 45vh;
     overflow: hidden;
     background-color: #f5f5f5;
-    border-radius: 10px;
+    border-radius: 5vh;
 }
 
 .servico-image img {
@@ -169,9 +170,8 @@ nav {
     align-items: center;
     justify-content: center;
     padding: 4rem;
-    background-color: #ffffff00;
     border-radius: 10px;
-    color: white;
+    color: rgb(109, 63, 33);
 }
 
 .servico-content-inner {
@@ -181,7 +181,7 @@ nav {
 
 .servico-content h2 {
     font-size: 3.5rem;
-    color: #ffffff;
+    color: #5a3a1c;
     margin-bottom: 1.5rem;
     line-height: 1.1;
     font-weight: 400;
@@ -216,6 +216,11 @@ a{
 
 .servico-button:hover {
     background-color: #9c7e65;
+}
+
+#flor_final{
+    background-image: url(img/final_fundo.jfif);
+    background-size: cover;
 }
 
 
