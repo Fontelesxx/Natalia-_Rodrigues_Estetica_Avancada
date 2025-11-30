@@ -106,24 +106,24 @@ nav {
 
 /* COnteudo principal */
 
-#fundo_servicos{
+#fundo_servicos {
     background-image: url(img/background\ serviços.png);
-    background-size: cover ;
+    background-size: cover;
     background-color: rgba(0, 0, 0, 0.5);
     background-blend-mode: darken;
-    border-bottom-left-radius:340px ;
+    border-bottom-left-radius: 340px;
     height: 80vh;
 }
 
-#servicos_s{
+#servicos_s {
     padding-top: 37vh;
     color: #ffffff;
     font-size: 6vh;
 }
 
-#servicos_s h1{
+#servicos_s h1 {
     background-color: #f9e7e95b;
-    width:140vh ;
+    width: 140vh;
     border-radius: 0 40px 0 0;
     height: 70vh;
     padding-left: 38vh;
@@ -137,10 +137,10 @@ nav {
     height: 70vh;
     margin-bottom: 0px;
     margin-left: 4vh;
-    
+
 }
 
-#primeira_section{
+#primeira_section {
     margin-top: 20vh;
 }
 
@@ -195,7 +195,7 @@ nav {
     line-height: 1.8;
 }
 
-a{
+a {
     text-decoration: none;
     color: #f5f5f5;
 }
@@ -218,7 +218,7 @@ a{
     background-color: #9c7e65;
 }
 
-#flor_final{
+#flor_final {
     background-image: url(img/final_fundo.jfif);
     background-size: cover;
 }
@@ -256,7 +256,7 @@ footer div h4 {
 
 /* Tablet */
 
-@media (min-width: 768px) and (max-width: 1024px){
+@media (min-width: 768px) and (max-width: 1024px) {
 
     /* Nav */
     header {
@@ -275,15 +275,15 @@ footer div h4 {
 
     /* inicio servico */
 
-    #servicos_s h1{
-    width:100vh ;
-    border-radius: 0 40px 0 0;
-    height: 70vh;
-    padding-left: 20vh;
-    padding-top: 7vh;
-    font-size: 7vh;
+    #servicos_s h1 {
+        width: 100vh;
+        border-radius: 0 40px 0 0;
+        height: 70vh;
+        padding-left: 20vh;
+        padding-top: 7vh;
+        font-size: 7vh;
 
-}
+    }
 
 
     /* Seções de Serviço */
@@ -293,7 +293,7 @@ footer div h4 {
         text-align: center;
     }
 
-    
+
     .servico-image {
         width: 100%;
         height: 350px;
@@ -320,15 +320,16 @@ footer div h4 {
         font-size: 2vh;
     }
 
-    footer div img{
+    footer div img {
         height: 15vh;
     }
 }
 
 /* Mobile (max-width: 767px) */
 @media (max-width: 767px) {
-     /* Nav */
-     body {
+
+    /* Nav */
+    body {
         font-size: 16px;
     }
 
@@ -360,27 +361,35 @@ footer div h4 {
 
 
 
-/* Servico */
+    /* Servico */
 
-   #servicos_s{
-    padding-top: 17vh;
-    font-size: 1px;
-    flex-direction: column;
-    
-   }
+    #servicos_s {
+        padding-top: 17vh;
+        font-size: 1px;
+        flex-direction: column;
+
+    }
 
 
-    #servicos_s h1{
+    #fundo_servicos {
+        border-bottom-left-radius: 140px;
+    }
+
+    #flor_final {
+        background-image: none;
+    }
+
+    #servicos_s h1 {
         width: 40vh;
         border-radius: 0 40px 0 0;
         height: 50vh;
         font-size: 1px;
-        
-}
+
+    }
 
     /* Seção de Título/Fundo */
 
-    #primeira_section{
+    #primeira_section {
         margin-top: 13vh;
     }
 
@@ -401,16 +410,16 @@ footer div h4 {
         min-width: auto;
     }
 
-    .servico-section.reverse{
+    .servico-section.reverse {
         margin: 40px 60px;
         flex-direction: column;
         text-align: center;
         min-width: auto;
     }
 
-    
 
-    
+
+
     .servico-image {
         width: 100%;
         height: 350px;
