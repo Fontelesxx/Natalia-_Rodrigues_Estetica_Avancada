@@ -383,7 +383,9 @@ footer div h4 {
         width: 40vh;
         border-radius: 0 40px 0 0;
         height: 50vh;
-        font-size: 1px;
+        font-size: 2rem;
+        padding-left: 9vh;
+        padding-top: 4vh;
 
     }
 
@@ -397,10 +399,7 @@ footer div h4 {
         height: 30vh;
     }
 
-    #servicos_s h1 {
-        font-size: 2rem;
-        padding-left: 6vh;
-    }
+   
 
     /* Seções de Serviço */
     .servico-section {
