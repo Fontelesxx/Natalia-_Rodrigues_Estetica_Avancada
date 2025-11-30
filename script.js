@@ -30,4 +30,4 @@ window.addEventListener('scroll', () => {
         }
 
         showSlide(index);
-        setInterval(nextSlide, 7000); // troca a cada 7 segundos
+        setInterval(nextSlide, 6000); // troca a cada 6 segundos
