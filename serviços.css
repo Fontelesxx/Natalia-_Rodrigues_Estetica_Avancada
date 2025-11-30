@@ -276,7 +276,6 @@ footer div h4 {
     /* inicio servico */
 
     #servicos_s h1{
-    background-color: #491f068a;
     width:100vh ;
     border-radius: 0 40px 0 0;
     height: 70vh;
@@ -372,8 +371,7 @@ footer div h4 {
 
 
     #servicos_s h1{
-        background-color: #491f068a;
-        width:40vh ;
+        width: 40vh;
         border-radius: 0 40px 0 0;
         height: 50vh;
         font-size: 1px;
@@ -415,7 +413,6 @@ footer div h4 {
     .servico-image {
         width: 100%;
         height: 350px;
-        border-radius: 10px 10px 0 0;
     }
 
     .servico-content {

@@ -143,7 +143,7 @@ nav {
     gap: 15vh;
     margin-top: 25vh;
     align-items: center;
-    
+
 }
 
 #apresentacao_dona {
@@ -624,11 +624,7 @@ footer div h4 {
 
     #servicos_inicio div img {
         width: 65%;
-        height: 10vh;
-    }
-
-    #tamanho_da_manta {
-        height: 16vh;
+        height: 65%;
     }
 
 
