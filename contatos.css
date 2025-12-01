@@ -69,7 +69,15 @@ header.scrolled {
     height: 10vh;
     font-size: 2.5vh;
 
+
 }
+
+
+#natalia{
+        color: #ffffff;
+        text-decoration: none;
+    }
+
 
 nav {
     display: flex;
@@ -137,6 +145,16 @@ nav {
     align-items: center;
     justify-content: flex-start;
 }
+
+
+
+
+.cta-section{
+    margin-top: 10vh;
+}
+
+
+
 
 @media (min-width: 768px) {
     .hero {

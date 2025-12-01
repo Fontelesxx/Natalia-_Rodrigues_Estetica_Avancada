@@ -36,6 +36,12 @@ header {
   z-index: 1000;
 }
 
+
+#natalia{
+  color: #ffffff;
+  text-decoration: none;
+}
+
 header.scrolled {
   background: #664020cc;
   backdrop-filter: blur(10px);

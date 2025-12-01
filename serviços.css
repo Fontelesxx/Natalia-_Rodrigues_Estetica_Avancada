@@ -14,8 +14,6 @@
 
 body {
     background-image: url(img/fundo_principal.jfif);
-    background-size: cover;
-
     color: #181616;
     font-family: "Noto Serif Hebrew", serif;
 }
@@ -122,10 +120,10 @@ nav {
 }
 
 #servicos_s h1 {
-    background-color: #f9e7e95b;
+    background-color: #f5f5f55b;
     width: 140vh;
     border-radius: 0 40px 0 0;
-    height: 70vh;
+    height: 50vh;
     padding-left: 38vh;
     padding-top: 7vh;
 

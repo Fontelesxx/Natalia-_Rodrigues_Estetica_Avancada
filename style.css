@@ -23,7 +23,9 @@ body {
 
 /* Barra de navegação */
 
-
+    #natalia{
+        color: #ffffff;
+    }
 
 header {
     display: flex;
@@ -594,7 +596,8 @@ footer div h4 {
 
     #apresentacao_foto1 {
         width: 90%;
-        height: auto;
+        height: 90%;
+        
     }
 
     /* Servicos inicio */
