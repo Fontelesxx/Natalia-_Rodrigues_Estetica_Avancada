@@ -212,7 +212,8 @@
             }
 
             // Construir mensagem para WhatsApp
-            const dataFormatada = new Date(formData.data).toLocaleDateString('pt-BR');
+            const [ano, mes, dia] = formData.data.split("-");
+            const dataFormatada = `${dia}/${mes}/${ano}`;
             const mensagem = `Olá Natália! Gostaria de agendar um horário:\n\n*Dados Pessoais:*\nNome: ${formData.nome}\nTelefone: ${formData.telefone}\nE-mail: ${formData.email}\n\n*Agendamento:*\nServiço: ${formData.servico}\nData: ${dataFormatada}\nHorário: ${formData.horario}\n\n${formData.observacoes ? `*Observações:*\n${formData.observacoes}` : ''}`;
 
             // Mostrar mensagem de sucesso
