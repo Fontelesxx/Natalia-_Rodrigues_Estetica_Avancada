@@ -244,6 +244,7 @@ textarea {
   font-size: 1rem;
   color: #666;
   transition: all 0.3s ease;
+  border-radius: 3vh;
 }
 
 input[type="text"]:focus,
@@ -302,7 +303,7 @@ button {
 
 .btn-reset {
   background-color: #D4B5A0;
-  color: #8B7355;
+  color: #ffffff;
 }
 
 .btn-reset:hover {
