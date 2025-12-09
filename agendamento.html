@@ -226,7 +226,7 @@
             // Redirecionar para WhatsApp após 5 segundos
             setTimeout(() => {
                 const whatsappUrl = `https://wa.me/5511964539393?text=${encodeURIComponent(mensagem)}`;
-                window.open(whatsappUrl, '_blank');
+                window.location.href = whatsappUrl, '_blank';
 
                 // Limpar formulário e fechar mensagem de sucesso
                 form.reset();
