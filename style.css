@@ -102,9 +102,12 @@ nav {
     align-items: center;
 }
 
+
+
 #imagem_logo {
     height: 65px;
     border-radius: 10px;
+    padding-top: 3px;
 }
 
 

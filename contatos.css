@@ -68,14 +68,15 @@ header.scrolled {
     backdrop-filter: blur(10px);
     height: 10vh;
     font-size: 2.5vh;
+    
 
 
 }
 
 
 #natalia{
-        color: #ffffff;
-        text-decoration: none;
+    color: #ffffff;
+    text-decoration: none;
     }
 
 
@@ -133,6 +134,7 @@ nav {
 #imagem_logo {
     height: 65px;
     border-radius: 10px;
+    padding-top: 5px;
 }
 
 /* Começo */

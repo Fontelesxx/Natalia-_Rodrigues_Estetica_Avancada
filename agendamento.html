@@ -192,8 +192,33 @@
 
 
 
+
+
         const form = document.getElementById('agendamentoForm');
         const successMessage = document.getElementById('successMessage');
+
+
+        // Máscara do telefone
+        const telInput = document.getElementById('telefone');
+
+        telInput.addEventListener('input', function () {
+            let value = this.value.replace(/\D/g, "");
+
+            if (value.length > 11) value = value.slice(0, 11);
+
+            if (value.length <= 10) {
+                // Formato fixo: (11) 3456-7890
+                this.value = value
+                    .replace(/^(\d{2})(\d)/, "($1) $2")
+                    .replace(/(\d{4})(\d)/, "$1-$2");
+            } else {
+                // Formato celular: (11) 98765-4321
+                this.value = value
+                    .replace(/^(\d{2})(\d)/, "($1) $2")
+                    .replace(/(\d{5})(\d)/, "$1-$2");
+            }
+        });
+
 
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -208,6 +233,9 @@
                 horario: document.getElementById('horario').value,
                 observacoes: document.getElementById('observacoes').value
             };
+
+
+
 
             // Validar campos obrigatórios
             if (!formData.nome || !formData.telefone || !formData.email || !formData.servico || !formData.data || !formData.horario) {
